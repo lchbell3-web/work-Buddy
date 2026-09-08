@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彩票预测门户 · 竞猜 2026-09-10</title>
+<style>
+  .portal-nav{background:linear-gradient(135deg,#0b2a4a,#1e4a7a);color:#fff;padding:0 16px;
+    position:sticky;top:0;z-index:99;display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-height:50px;
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;box-shadow:0 2px 10px rgba(11,42,74,.25);}
+  .portal-nav .bn{font-weight:700;margin-right:14px;font-size:15px;letter-spacing:.4px;}
+  .portal-nav a{color:#dbe7f5;text-decoration:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;transition:all .18s;}
+  .portal-nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+  .portal-nav a.on{background:linear-gradient(135deg,#e53935,#d32f2f);color:#fff;box-shadow:0 2px 8px rgba(229,57,53,.4);}
+  .portal-nav select{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
+    border-radius:6px;padding:5px 8px;font-size:12px;margin-left:auto;}
+  .portal-nav select option{color:#1f2937;}
+  @media(max-width:720px){
+    .portal-nav{padding:6px 8px;gap:3px;min-height:auto;}
+    .portal-nav .bn{width:100%;margin-right:0;font-size:14px;}
+    .portal-nav a{padding:6px 10px;font-size:12.5px;}
+    .portal-nav select{margin-left:0;margin-top:2px;max-width:100%;}
+  }
+
+  .portal-nav{background:linear-gradient(135deg,#0b2a4a,#1e4a7a);color:#fff;padding:0 16px;
+    position:sticky;top:0;z-index:99;display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-height:50px;
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;box-shadow:0 2px 10px rgba(11,42,74,.25);}
+  .portal-nav .bn{font-weight:700;margin-right:14px;font-size:15px;letter-spacing:.4px;}
+  .portal-nav a{color:#dbe7f5;text-decoration:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;transition:all .18s;}
+  .portal-nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+  .portal-nav a.on{background:linear-gradient(135deg,#e53935,#d32f2f);color:#fff;box-shadow:0 2px 8px rgba(229,57,53,.4);}
+  .portal-nav select{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
+    border-radius:6px;padding:5px 8px;font-size:12px;margin-left:auto;}
+  .portal-nav select option{color:#1f2937;}
+  @media(max-width:720px){
+    .portal-nav{padding:6px 8px;gap:3px;min-height:auto;}
+    .portal-nav .bn{width:100%;margin-right:0;font-size:14px;}
+    .portal-nav a{padding:6px 10px;font-size:12.5px;}
+    .portal-nav select{margin-left:0;margin-top:2px;max-width:100%;}
+  }
+  *{box-sizing:border-box}
+  body{font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",sans-serif;margin:0;background:#f0f4f9;color:#1f2937;}
+  .nav{background:linear-gradient(135deg,#0b2a4a,#1e4a7a);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(11,42,74,.28);}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-height:56px;}
+  .nav .brand{font-weight:700;font-size:17px;margin-right:18px;letter-spacing:.5px;}
+  .nav a{color:#dbe7f5;text-decoration:none;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;transition:all .18s;}
+  .nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+  .nav a.active{background:linear-gradient(135deg,#e53935,#d32f2f);color:#fff;box-shadow:0 2px 8px rgba(229,57,53,.4);}
+  .container{max-width:1120px;margin:0 auto;padding:20px 20px 44px;}
+  .card{background:#fff;border:1px solid #e5eaf1;border-radius:14px;padding:20px 22px;margin:16px 0;box-shadow:0 1px 4px rgba(16,42,84,.05);transition:box-shadow .2s;}
+  .card:hover{box-shadow:0 6px 20px rgba(16,42,84,.1);}
+  h2{margin:0 0 6px;font-size:18px;color:#0b2a4a;font-weight:600;}
+  .sub{color:#6b7280;font-size:13px;margin:6px 0 14px;line-height:1.6;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:linear-gradient(135deg,#0b2a4a,#17406e);color:#fff;padding:10px 9px;font-weight:600;white-space:nowrap;}
+  td{border-bottom:1px solid #edf1f6;padding:9px 8px;text-align:center;}
+  tr:nth-child(even) td{background:#f8fafd;}
+  tbody tr:hover td{background:#eef4fb;}
+  td.l{text-align:left;} td.small{font-size:12px;color:#57606f;}
+  .badge{display:inline-block;border-radius:20px;padding:2px 11px;font-size:11px;font-weight:700;}
+  .badge.rh{background:#fdeaea;color:#d64545;} .badge.rm{background:#fdf3e2;color:#d97706;} .badge.rl{background:#e5f6ee;color:#0e9f6e;}
+  .ud-wrap{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;max-width:280px;}
+  td.ud .conf{font-weight:700;color:#0b2a4a;display:block;margin-bottom:3px;}
+  .ud{display:inline-block;font-size:10px;border-radius:4px;padding:1px 6px;color:#1f2937;background:#eef1f6;border:1px solid #dbe2ea;cursor:help;transition:.15s;}
+  .ud:hover{transform:translateY(-1px);}
+  .ud.rh{background:#fdeaea;color:#d64545;border-color:#f5c2c2;} .ud.rm{background:#fdf3e2;color:#d97706;border-color:#f0d9a8;} .ud.rl{background:#e5f6ee;color:#0e9f6e;border-color:#b8e6d3;}
+  .parlay{border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;margin:12px 0;background:linear-gradient(135deg,#fafcff,#f4f8ff);box-shadow:0 1px 3px rgba(16,42,84,.04);transition:.2s;}
+  .parlay:hover{box-shadow:0 4px 14px rgba(16,42,84,.1);transform:translateY(-1px);}
+  .parlay.t3{background:linear-gradient(135deg,#fbfaff,#f5f0fb);}
+  .parlay.t4{background:linear-gradient(135deg,#f0faf8,#e3f3ee);}
+  .ph{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-bottom:9px;align-items:center;}
+  .ph b{color:#0b2a4a;font-size:16px;}
+  .ph .pot{color:#0e9f6e;font-weight:700;}
+  .ph .pscore{color:#e53935;font-weight:700;}
+  .pnote{margin-top:7px;font-size:12px;color:#64748b;border-top:1px dashed #e2e8f0;padding-top:6px;}
+  .pt{color:#1f2937;} .pp{color:#1565c0;font-weight:700;background:#e8f1fb;border-radius:5px;padding:1px 8px;font-size:12px;}
+  .podd{color:#b45309;font-weight:700;font-size:12px;}
+  .pcode{display:inline-block;background:#0b2a4a;color:#fff;border-radius:5px;padding:0 7px;font-size:11px;font-weight:700;margin-right:3px;line-height:1.9;}
+  .pday{color:#94a3b8;font-size:11px;margin-left:3px;}
+  .star{color:#f5b50a;letter-spacing:1px;font-size:11px;}
+  .plays{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;justify-content:center;}
+  .pl{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;}
+  .pl .tg{font-style:normal;color:#64748b;background:#eef1f6;border:1px solid #e2e8f0;border-radius:5px;padding:0 6px;font-size:11px;line-height:1.8;}
+  .pl b{color:#0b2a4a;font-weight:700;font-size:12.5px;}
+  .wrap{overflow-x:auto;}
+  .foot{margin:24px 0 0;padding:16px 22px;background:linear-gradient(135deg,#0b2a4a,#123a63);border-radius:12px;color:#c9d8ea;font-size:12px;line-height:2;}
+  .foot b{color:#fff;}
+  @media(max-width:720px){
+    .nav-inner{padding:6px 10px;gap:4px;min-height:auto;}
+    .nav .brand{width:100%;margin-right:0;font-size:15px;padding-bottom:2px;}
+    .nav a{padding:6px 11px;font-size:13px;}
+    .nav select{max-width:100%!important;width:100%;margin-left:0!important;margin-top:4px;font-size:13px;}
+    .container{padding:12px 10px 32px;}
+    .card{padding:14px 12px;border-radius:12px;}
+    h2{font-size:16px;}
+    table{font-size:12px;}
+    th{padding:8px 6px;white-space:normal;}
+    td{padding:7px 5px;}
+    .parlay{padding:12px 12px;}
+    .ph{gap:6px 10px;font-size:12px;}
+    .ph b{font-size:15px;}
+    .plays{gap:4px 6px;}
+    .pl b{font-size:12px;}
+    .ud-wrap{max-width:100%;}
+    .foot{padding:14px 14px;font-size:11px;line-height:1.9;}
+    /* 玩法标签手机端紧凑换行（每行2-3个，不横滚；联赛列隐藏；爆冷只留徽章；
+       多角度分析列保留完整显示） */
+    th.lg,td.lg{display:none;}
+    td.ud .ud-wrap{display:none;}
+    td.ud{white-space:nowrap;}
+    .plays{flex-wrap:wrap;justify-content:flex-start;gap:4px;line-height:1.8;}
+    .pl{padding:1px 4px;border:1px solid #e2e8f0;border-radius:5px;background:#f8fafd;}
+    .pl .tg{font-size:10.5px;padding:0 5px;line-height:1.6;}
+    .pl b{font-size:11.5px;}
+    .ph .podd{display:inline;}
+    .pnote{font-size:11px;line-height:1.8;}
+    /* ===== 移动端卡片化：竞猜两大表转超紧凑卡片（串关头行 + 腿整行拉宽 + 组合中奖信息合并胶囊） ===== */
+    table.resp{width:100%;box-sizing:border-box;}
+    table.resp tbody,table.resp tr{display:block;width:100%;box-sizing:border-box;}
+    table.resp td{box-sizing:border-box;}
+    table.resp thead{display:none;}
+    table.resp{margin:6px 0 14px;}
+    table.resp tbody tr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0 0 9px;border:1px solid #e5eaf1;border-radius:12px;padding:8px 10px;background:#fff;box-shadow:0 1px 6px rgba(16,42,84,.05);}
+    table.resp td{display:inline-flex;align-items:baseline;gap:3px;padding:2px 0;text-align:left;white-space:normal;min-width:0;flex:0 0 auto;width:auto;max-width:fit-content;}
+    table.resp td::before{content:attr(data-label);font-size:10.5px;font-weight:600;color:#94a3b8;margin-right:2px;white-space:nowrap;}
+    table.resp tr:nth-child(even) td{background:transparent;}
+    table.resp tbody tr:hover td{background:transparent;}
+    /* 串关头部：类型+金额 与 综合评分 一行两端 */
+    table.resp td[data-label="串关"]{font-weight:700;font-size:13px;color:#0b2a4a;}
+    table.resp td[data-label="串关"] .small{color:#64748b;font-size:11px;font-weight:400;margin-left:4px;}
+    table.resp td[data-label="综合"]{margin-left:auto;color:#0b2a4a;}
+    /* 腿：整行拉宽（label 行首 + 内容流式铺满） */
+    table.resp td[data-label="腿·对阵"]{flex:1 1 100%;display:block;border-top:1px dashed #edf1f6;margin-top:3px;padding-top:4px;}
+    table.resp td[data-label="腿·对阵"]::before{display:inline-block;margin-right:6px;}
+    table.resp .legs{line-height:1.8;font-size:12.5px;}
+    /* 组合中奖信息：合并成一行胶囊（自动换行） */
+    table.resp td[data-label="组合赔率"],table.resp td[data-label="中奖概率"],table.resp td[data-label="平均信心"],table.resp td[data-label="期望回报"],table.resp td[data-label="价值"],table.resp td[data-label="理论中奖"]{background:#f3f7fc;border-radius:6px;padding:1px 7px;font-size:12px;}
+    /* 逐场：对阵/玩法预测/信心爆冷 整行紧凑 */
+    table.resp td[data-label="对阵"],table.resp td[data-label="玩法预测"],table.resp td[data-label="信心/爆冷"]{flex:1 1 100%;display:block;border-top:1px dashed #edf1f6;margin-top:3px;padding-top:4px;}
+    table.resp td[data-label="对阵"]::before,table.resp td[data-label="玩法预测"]::before,table.resp td[data-label="信心/爆冷"]::before{display:inline-block;margin-right:6px;}
+    table.resp td[data-label="联赛"]{font-size:12px;color:#57606f;margin-left:8px;}
+    table.resp td[data-label="玩法预测"] .plays{justify-content:flex-start;line-height:1.7;gap:3px 6px;}
+    table.resp td.ud{white-space:normal;}
+    table.resp td.ud .ud-wrap{display:block;margin-top:3px;max-width:100%;}
+    /* 多角度分析：独立浅色信息块整行 */
+    table.resp td[data-label="多角度分析"]{flex:1 1 100%;background:#f6f9fd;border:1px solid #e8eef6;border-radius:8px;padding:7px 10px;font-size:11px;line-height:1.7;color:#374151;margin-top:3px;}
+    table.resp td[data-label="多角度分析"]::before{display:inline-block;margin-right:6px;}
+    /* 单关逐场"投注"栏：手机上删除 */
+    table.resp td[data-label="投注"]{display:none;}
+
+
+  }
+</style></head>
+<body><div class="portal-nav"><span class="bn">🎱 彩票预测门户</span><a href="daily_today.html" class="">今日预测</a><a href="index.html" class="on">竞猜</a><a href="daily.html" class="">日报</a><a href="weekly.html" class="">周报</a><a href="jc_weekly.html" class="">竞猜周报</a><a href="jc_daily.html" class="">竞猜日报</a><a href="jc_accuracy.html" class="">准确率</a><select onchange="location.href=this.value"><option value="index.html">⚽ 跨天·最新</option><option value="jc_2026-09-10.html" selected>📅 2026-09-10</option><option value="jc_2026-09-09.html">📅 2026-09-09</option><option value="jc_2026-09-08.html">📅 2026-09-08</option><option value="jc_2026-09-07.html">📅 2026-09-07</option><option value="jc_2026-09-06.html">📅 2026-09-06</option><option value="jc_2026-09-05.html">📅 2026-09-05</option><option value="jc_2026-09-04.html">📅 2026-09-04</option><option value="jc_2026-09-03.html">📅 2026-09-03</option><option value="jc_2026-09-02.html">📅 2026-09-02</option><option value="jc_2026-09-01.html">📅 2026-09-01</option><option value="jc_2026-08-31.html">📅 2026-08-31</option><option value="jc_2026-08-30.html">📅 2026-08-30</option><option value="jc_2026-08-29.html">📅 2026-08-29</option><option value="jc_2026-08-28.html">📅 2026-08-28</option><option value="jc_2026-08-27.html">📅 2026-08-27</option><option value="jc_2026-08-26.html">📅 2026-08-26</option><option value="jc_2026-08-25.html">📅 2026-08-25</option><option value="jc_2026-08-24.html">📅 2026-08-24</option><option value="jc_2026-08-23.html">📅 2026-08-23</option><option value="jc_2026-08-22.html">📅 2026-08-22</option><option value="jc_2026-08-21.html">📅 2026-08-21</option><option value="jc_2026-08-20.html">📅 2026-08-20</option><option value="jc_2026-08-19.html">📅 2026-08-19</option><option value="jc_2026-08-18.html">📅 2026-08-18</option><option value="jc_2026-08-17.html">📅 2026-08-17</option><option value="jc_2026-08-16.html">📅 2026-08-16</option><option value="jc_2026-08-15.html">📅 2026-08-15</option><option value="jc_2026-08-14.html">📅 2026-08-14</option><option value="jc_2026-08-13.html">📅 2026-08-13</option><option value="jc_2026-08-12.html">📅 2026-08-12</option><option value="jc_2026-08-08.html">📅 2026-08-08</option></select></div>
+<div class="container" style="max-width:1120px;margin:0 auto;padding:18px 20px 40px;">
+  
+<div class="card">
+  <h2>⚽ 竞猜预测（2026-09-10）</h2>
+  <p class="sub">规则：每日限额 <b>¥100</b> · 全部投入<b>串关</b>（最低 2串1、可跨天）· 单场只<b>预测算准确率</b>不买入 · 每场多角度分析并评估爆冷｜数据源：单天（真实赛程缓存）</p>
+  <div class="note" style="margin:10px 0 4px;padding:10px 12px;border:1px solid #E4E3DD;border-radius:10px;background:#FBF9F4;font-size:12.5px;color:#555;">🎯 今日无跨天串关（符合「宁可空仓不瞎下」原则）：明/后两天合格腿不足——低预测性联赛（英冠/芬超/巴甲/美职/韩职/瑞超/德乙/荷乙）已按回测规则排除串关，或剩余腿信心/风险不达标。串关引擎保持启用，出现合格腿即自动恢复；单关仍全部预测，不受影响。</div>
+  <div class="wrap"><table class="resp"><thead>
+    <tr><th>对阵（比赛日）</th><th class="lg">联赛</th><th>玩法预测</th><th class="ud">信心 / 爆冷</th><th class="ana">多角度分析</th><th>投注</th></tr>
+  </thead><tbody>
+    <tr><td class="l" data-label="对阵"><b>巴塞罗那</b> vs <b>费耶诺德</b><br><small>[2026-09-10 周三003]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl"><em class="tg">让球 -3</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span><span class="pl"><em class="tg">比分Top3</em><b>1:1 0:1 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>4</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rh" title="主推胜概率36%，其余合计64%">实力差距 64</span><span class="ud rh" title="主推36% vs 次选36%，差距0个百分点（接近、难预测）">状态波动 90</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 70</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟2:1｜主胜36% 平28% 客胜36%｜赔率 主3.0/平3.82/客3.03｜冷门综合69%（实力差距64 状态波动90 联赛冷门系数84 伤停不确定性70 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜增强模型倾向负（仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>斯图加特</b> vs <b>维京</b><br><small>[2026-09-10 周三004]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">负</b></span><span class="pl"><em class="tg">让球 -2</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>1:1 0:1 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>4</b></span><span class="pl"><em class="tg">半全场</em><b>负负</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rm" title="主推负概率41%，其余合计59%">实力差距 59</span><span class="ud rh" title="主推41% vs 次选32%，差距8个百分点（接近、难预测）">状态波动 83</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 69</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟1:2｜主胜32% 平27% 客胜41%｜赔率 主3.34/平4.0/客2.66｜冷门综合66%（实力差距59 状态波动83 联赛冷门系数84 伤停不确定性69 H2H波动性50）｜增强模型倾向胜（仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>特温特</b> vs <b>特尔斯达</b><br><small>[2026-09-10 周三005]</small></td><td class="lg" data-label="联赛">荷甲</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span><span class="pl"><em class="tg">让球 -2</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>1:1 2:2 2:1</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.46</b><br><span class="badge rm">爆冷中</span><div class="ud-wrap"><span class="ud rm" title="主推胜概率51%，其余合计49%">实力差距 49</span><span class="ud rh" title="主推51% vs 次选25%，差距25个百分点">状态波动 67</span><span class="ud rh" title="荷甲 系数 0.90（杯赛/次级联赛偏冷）">联赛冷门系数 90</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 62</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟3:2｜主胜51% 平24% 客胜25%｜赔率 主2.13/平4.5/客4.28｜冷门综合57%（实力差距49 状态波动67 联赛冷门系数90 伤停不确定性62 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜增强模型倾向胜（仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>里斯本竞技</b> vs <b>加拉塔萨雷</b><br><small>[2026-09-10 周三006]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span><span class="pl"><em class="tg">让球 -1</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>2:0 3:0 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>平胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rm" title="主推胜概率45%，其余合计55%">实力差距 55</span><span class="ud rh" title="主推45% vs 次选28%，差距17个百分点（接近、难预测）">状态波动 75</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 62</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟2:1｜主胜45% 平28% 客胜28%｜赔率 主1.58/平3.75/客4.35｜冷门综合61%（实力差距55 状态波动75 联赛冷门系数84 伤停不确定性62 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜先估后锚：市场倾向胜(55%) vs 自研ELO倾向胜(37%)｜⚠分歧18pp达重审线（市场55% vs 自研37%，自研倾向胜，仅提示不采信）｜三方共识（市场/自研ELO/增强模型均胜）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>那不勒斯</b> vs <b>阿森纳</b><br><small>[2026-09-10 周三007]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">负</b></span><span class="pl"><em class="tg">让球 1</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">比分Top3</em><b>0:2 0:1 1:1</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>负负</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.49</b><br><span class="badge rm">爆冷中</span><div class="ud-wrap"><span class="ud rm" title="主推负概率53%，其余合计47%">实力差距 47</span><span class="ud rh" title="主推53% vs 次选27%，差距26个百分点">状态波动 67</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 63</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟1:2｜主胜20% 平27% 客胜53%｜赔率 主4.4/平3.38/客1.65｜冷门综合55%（实力差距47 状态波动67 联赛冷门系数84 伤停不确定性63 H2H波动性50）｜先估后锚：市场倾向负(53%) vs 自研ELO倾向负(52%)｜三方共识（市场/自研ELO/增强模型均负）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>利物浦</b> vs <b>马德里竞技</b><br><small>[2026-09-10 周三008]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span><span class="pl"><em class="tg">让球 -1</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>2:0 3:0 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rm" title="主推胜概率46%，其余合计54%">实力差距 54</span><span class="ud rh" title="主推46% vs 次选28%，差距19个百分点（接近、难预测）">状态波动 73</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 68</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟2:1｜主胜46% 平28% 客胜26%｜赔率 主1.63/平3.7/客4.07｜冷门综合61%（实力差距54 状态波动73 联赛冷门系数84 伤停不确定性68 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜先估后锚：市场倾向胜(54%) vs 自研ELO倾向胜(42%)｜⚠分歧12pp达重审线（市场54% vs 自研42%，自研倾向胜，仅提示不采信）｜三方共识（市场/自研ELO/增强模型均胜）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>巴黎圣日尔曼</b> vs <b>布拉迪斯拉发</b><br><small>[2026-09-10 周三009]</small></td><td class="lg" data-label="联赛">欧冠</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">负</b></span><span class="pl"><em class="tg">让球 -3</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>1:1 0:1 2:1</b></span><span class="pl"><em class="tg">总进球</em><b>4</b></span><span class="pl"><em class="tg">半全场</em><b>平负</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rh" title="主推负概率37%，其余合计63%">实力差距 63</span><span class="ud rh" title="主推37% vs 次选37%，差距0个百分点（接近、难预测）">状态波动 90</span><span class="ud rh" title="欧冠 系数 0.84（杯赛/次级联赛偏冷）">联赛冷门系数 84</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 60</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟1:2｜主胜37% 平27% 客胜37%｜赔率 主2.95/平4.05/客2.94｜冷门综合68%（实力差距63 状态波动90 联赛冷门系数84 伤停不确定性60 H2H波动性50）｜增强模型倾向胜（仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>切尔西</b> vs <b>利兹联</b><br><small>[2026-09-10 周三011]</small></td><td class="lg" data-label="联赛">英联赛杯</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span><span class="pl"><em class="tg">让球 -1</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>2:0 1:0 3:1</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>平胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rm" title="主推胜概率42%，其余合计58%">实力差距 58</span><span class="ud rh" title="主推42% vs 次选33%，差距9个百分点（接近、难预测）">状态波动 82</span><span class="ud rh" title="英联赛杯 系数 0.90（杯赛/次级联赛偏冷）">联赛冷门系数 90</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 68</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟2:1｜主胜42% 平25% 客胜33%｜赔率 主1.51/平3.85/客4.85｜冷门综合65%（实力差距58 状态波动82 联赛冷门系数90 伤停不确定性68 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜先估后锚：市场倾向胜(58%) vs 自研ELO倾向负(42%)｜⚠分歧27pp达重审线（市场58% vs 自研31%，自研倾向负，仅提示不采信）｜增强模型分歧（自研倾向胜，仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>帕尔梅拉斯</b> vs <b>基多体育大学</b><br><small>[2026-09-10 周三013]</small></td><td class="lg" data-label="联赛">解放者杯</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fff8e1;color:#b8860b;border:1px solid #ffd54f" title="融合平局概率 30% ≥ 阈值 30%，平局风险偏高；仅提示，主推方向不变">30%平局候选</span><span class="pl"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让胜</b></span><span class="pl"><em class="tg">比分Top3</em><b>2:0 3:0 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rm" title="主推胜概率49%，其余合计51%">实力差距 51</span><span class="ud rh" title="主推49% vs 次选30%，差距18个百分点（接近、难预测）">状态波动 74</span><span class="ud rh" title="解放者杯 系数 0.90（杯赛/次级联赛偏冷）">联赛冷门系数 90</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 69</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟3:0｜主胜49% 平30% 客胜21%｜赔率 主1.2/平4.95/客11.0｜冷门综合60%（实力差距51 状态波动74 联赛冷门系数90 伤停不确定性69 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜先估后锚：市场倾向胜(70%) vs 自研ELO倾向平(36%)｜⚠分歧36pp达重审线（市场70% vs 自研34%，自研倾向平，仅提示不采信）｜增强模型分歧（自研倾向胜，仅展示不采信）</td><td data-label="投注">预测</td></tr><tr><td class="l" data-label="对阵"><b>拉普拉塔大学生</b> vs <b>科林蒂安</b><br><small>[2026-09-10 周三014]</small></td><td class="lg" data-label="联赛">解放者杯</td><td class="l" data-label="玩法预测"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fff8e1;color:#b8860b;border:1px solid #ffd54f" title="融合平局概率 36% ≥ 阈值 30%，平局风险偏高；仅提示，主推方向不变">36%平局候选</span><span class="pl"><em class="tg">让球 -1</em><span style="color:#999;font-weight:400">让负</span></span><span class="pl"><em class="tg">比分Top3</em><b>1:0 0:0 1:1</b></span><span class="pl"><em class="tg">总进球</em><b>1</b></span><span class="pl"><em class="tg">半全场</em><b>平胜</b></span></div></td><td class="ud" data-label="信心/爆冷"><b class="conf">0.41</b><br><span class="badge rh">爆冷高</span><div class="ud-wrap"><span class="ud rh" title="主推胜概率37%，其余合计63%">实力差距 63</span><span class="ud rh" title="主推37% vs 次选36%，差距1个百分点（接近、难预测）">状态波动 89</span><span class="ud rh" title="解放者杯 系数 0.90（杯赛/次级联赛偏冷）">联赛冷门系数 90</span><span class="ud rh" title="已开售、信息较全">伤停不确定性 71</span><span class="ud rm" title="无真实历史交锋数据（引擎未接入H2H源），取中性值50，不放大也不缩小风险">H2H波动性 50</span></div></td><td class="l small ana" data-label="多角度分析">模拟1:0｜主胜37% 平36% 客胜27%｜赔率 主2.0/平2.58/客4.15｜冷门综合69%（实力差距63 状态波动89 联赛冷门系数90 伤停不确定性71 H2H波动性50）｜高冷门主胜串关降权，平局风险已上修｜先估后锚：市场倾向胜(43%) vs 自研ELO倾向平(36%)｜⚠分歧10pp达重审线（市场43% vs 自研33%，自研倾向平，仅提示不采信）｜增强模型分歧（自研倾向负，仅展示不采信）</td><td data-label="投注">预测</td></tr>
+  </tbody></table></div>
+</div>
+  <p style="color:#6b7280;font-size:12px;text-align:center;">彩票/竞彩为独立随机事件，本系统仅供娱乐参考，请理性购彩。</p>
+</div>
+</body></html>
