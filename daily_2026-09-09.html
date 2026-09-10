@@ -79,6 +79,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 .cp-bets .bn.hit { background: #22c55e; color: #fff; }
 .cp-verdict { margin-top: 6px; font-size: 12px; color: #0e9f6e; font-weight: 700; }
 .cp-verdict.none { color: #9aa5b1; font-weight: 400; }
+.gold { margin: 6px 0 8px; padding: 5px 10px; background: #fdf6e7; border: 1px solid #ecd9a8; border-radius: 6px; font-size: 12px; color: #8a6d1a; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.gold .gold-lbl { font-weight: 700; color: #b8860b; }
+.gold .gold-nums span { display: inline-block; min-width: 16px; text-align: center; background: #f3e9cf; border-radius: 3px; margin: 0 1px; padding: 0 3px; font-weight: 600; color: #8a6d1a; }
+.gold .gold-nums span.hit { background: #22c55e; color: #fff; }
+.gold .gold-note { color: #a08955; font-size: 11px; }
+/* 2026-09-10：玄学/π 趣味参考区块（仅展示，不计入投注统计） */
+.fun-picks { margin-top: 8px; padding: 8px 11px; background: #faf5ff; border: 1px dashed #c4b5fd; border-radius: 9px; }
+.fun-picks .fun-title { font-size: 11px; color: #7c3aed; font-weight: 700; margin-bottom: 5px; letter-spacing: .5px; }
+.fun-picks .fun-row { display: flex; align-items: center; gap: 8px; margin: 3px 0; flex-wrap: wrap; }
+.fun-picks .fun-lbl { display: inline-flex; flex: none; font-size: 11px; padding: 2px 8px; border-radius: 5px; color: #fff; font-weight: 600; }
+.fun-picks .fun-xuanxue .fun-lbl { background: linear-gradient(90deg, #7c3aed, #a855f7); }
+.fun-picks .fun-pi .fun-lbl { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+.fun-picks .fun-nums { font-family: 'Courier New', monospace; font-size: 14px; letter-spacing: 1px; }
+.fun-picks .fun-nums .bn { display: inline-block; min-width: 16px; text-align: center; background: #ede9fe; border-radius: 3px; margin: 0 1px; padding: 0 3px; font-weight: 600; color: #5b21b6; }
+.fun-picks .fun-nums .bn.hit { background: #22c55e; color: #fff; }
+.fun-picks .fun-hit { font-size: 11px; color: #7c3aed; font-weight: 600; margin-left: auto; }
 .grp-prize { font-size: 12px; font-weight: 700; margin-top: 5px; padding: 2px 8px; border-radius: 6px; display: inline-block; }
 .grp-prize.win { background: #e8f5e9; color: #2e7d32; }
 .grp-prize.none { background: #f5f5f5; color: #999; font-weight: 500; }
@@ -94,7 +110,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 
 <div class="header">
     <h1>🎱 彩票每日预测日报</h1>
-    <p>2026-09-09（周三）｜ 生成时间：2026-09-10 12:43</p>
+    <p>2026-09-09（周三）｜ 生成时间：2026-09-10 20:16</p>
 </div>
 
 <div class="container">
@@ -134,6 +150,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>大乐透 直选 6注（¥12，≤¥20）</b>（6 注 × ¥2.0 = <b>¥12.0</b>）<div class="cp-desc">前 8 12 19 24 29 + 后 3 4；前 5 6 20 21 35 + 后 6 7；前 8 10 26 29 33 + 后 7 12；前 10 12 22 26 29 + 后 1 12；前 11 12 19 28 29 + 后 1 2；前 7 8 18 20 35 + 后 2 11</div><div class="cp-bets"><span class="bet"><span class="bn">8</span><span class="bn">12</span><span class="bn">19</span><span class="bn">24</span><span class="bn">29</span><span class="bn">3</span><span class="bn">4</span></span><span class="bet"><span class="bn">5</span><span class="bn">6</span><span class="bn">20</span><span class="bn">21</span><span class="bn hit">35</span><span class="bn">6</span><span class="bn">7</span></span><span class="bet"><span class="bn">8</span><span class="bn">10</span><span class="bn">26</span><span class="bn">29</span><span class="bn">33</span><span class="bn">7</span><span class="bn hit">12</span></span><span class="bet"><span class="bn">10</span><span class="bn">12</span><span class="bn">22</span><span class="bn">26</span><span class="bn">29</span><span class="bn">1</span><span class="bn hit">12</span></span><span class="bet"><span class="bn">11</span><span class="bn">12</span><span class="bn">19</span><span class="bn">28</span><span class="bn">29</span><span class="bn">1</span><span class="bn hit">2</span></span><span class="bet"><span class="bn">7</span><span class="bn">8</span><span class="bn">18</span><span class="bn">20</span><span class="bn hit">35</span><span class="bn hit">2</span><span class="bn">11</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
             
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">10</span><span class="bn">15</span><span class="bn">23</span><span class="bn">33</span><span class="bn">34</span><span class="bn hit">2</span><span class="bn">8</span></span><span class="fun-hit">命中1</span></div><div class="fun-row fun-pi"><span class="fun-lbl">π小数位顺取</span><span class="fun-nums"><span class="bn">4</span><span class="bn">9</span><span class="bn">15</span><span class="bn">30</span><span class="bn">33</span><span class="bn">5</span><span class="bn hit">12</span></span><span class="fun-hit">命中1</span></div></div>
+            
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
                 <div class="num-row"><span class="ball ball-red">03</span><span class="ball ball-red">16</span><span class="ball ball-red">17</span><span class="ball ball-red">32</span><span class="ball ball-red">35</span><span class="sep">+</span><span class="ball ball-blue">02</span><span class="ball ball-blue">12</span></div>
@@ -147,6 +165,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
                 <span class="grp-stat">投入 ¥10.0 ｜ 中奖 0/5 注 ｜ 中奖 ¥0</span>
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>排列三 直选 5注（¥10，≤¥10）</b>（5 注 × ¥2.0 = <b>¥10.0</b>）<div class="cp-desc">316；106；573；109；929</div><div class="cp-bets"><span class="bet"><span class="bn">3</span><span class="bn">1</span><span class="bn">6</span></span><span class="bet"><span class="bn">1</span><span class="bn">0</span><span class="bn">6</span></span><span class="bet"><span class="bn">5</span><span class="bn">7</span><span class="bn">3</span></span><span class="bet"><span class="bn">1</span><span class="bn">0</span><span class="bn">9</span></span><span class="bet"><span class="bn">9</span><span class="bn">2</span><span class="bn">9</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
+            
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">5</span><span class="bn">5</span><span class="bn">1</span></span><span class="fun-hit">命中0</span></div><div class="fun-row fun-pi"><span class="fun-lbl">π小数位顺取</span><span class="fun-nums"><span class="bn">5</span><span class="bn hit">4</span><span class="bn hit">4</span></span><span class="fun-hit">命中2</span></div></div>
             
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
@@ -162,6 +182,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>3D 直选 5注（¥10，≤¥10）</b>（5 注 × ¥2.0 = <b>¥10.0</b>）<div class="cp-desc">717；852；349；975；612</div><div class="cp-bets"><span class="bet"><span class="bn">7</span><span class="bn">1</span><span class="bn">7</span></span><span class="bet"><span class="bn">8</span><span class="bn hit">5</span><span class="bn">2</span></span><span class="bet"><span class="bn">3</span><span class="bn">4</span><span class="bn">9</span></span><span class="bet"><span class="bn">9</span><span class="bn">7</span><span class="bn hit">5</span></span><span class="bet"><span class="bn">6</span><span class="bn">1</span><span class="bn">2</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
             
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">8</span><span class="bn hit">5</span><span class="bn">7</span></span><span class="fun-hit">命中1</span></div><div class="fun-row fun-pi"><span class="fun-lbl">π小数位顺取</span><span class="fun-nums"><span class="bn">7</span><span class="bn">7</span><span class="bn">7</span></span><span class="fun-hit">命中0</span></div></div>
+            
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
                 <div class="num-row"><span class="digit-box">5</span><span class="digit-box">5</span><span class="digit-box">5</span></div>
@@ -175,6 +197,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
                 <span class="grp-stat">投入 ¥6.0 ｜ 中奖 0/3 注 ｜ 中奖 ¥0</span>
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>排列五 直选 3注（¥6）</b>（3 注 × ¥2.0 = <b>¥6.0</b>）<div class="cp-desc">54999；47083；30579</div><div class="cp-bets"><span class="bet"><span class="bn">5</span><span class="bn hit">4</span><span class="bn">9</span><span class="bn">9</span><span class="bn">9</span></span><span class="bet"><span class="bn">4</span><span class="bn">7</span><span class="bn">0</span><span class="bn hit">8</span><span class="bn">3</span></span><span class="bet"><span class="bn">3</span><span class="bn">0</span><span class="bn">5</span><span class="bn">7</span><span class="bn">9</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
+            
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">0</span><span class="bn">6</span><span class="bn">2</span><span class="bn">1</span><span class="bn">3</span></span><span class="fun-hit">命中0</span></div><div class="fun-row fun-pi"><span class="fun-lbl">π小数位顺取</span><span class="fun-nums"><span class="bn">5</span><span class="bn hit">4</span><span class="bn">8</span><span class="bn">7</span><span class="bn">0</span></span><span class="fun-hit">命中1</span></div></div>
             
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
@@ -190,6 +214,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>七乐彩 直选 5注（¥10，≤¥10）</b>（5 注 × ¥2.0 = <b>¥10.0</b>）<div class="cp-desc">基本 8 9 14 20 24 26 28 特 4；基本 2 10 14 22 27 28 30 特 29；基本 1 3 6 13 14 22 25 特 28；基本 1 5 6 13 14 23 29 特 21；基本 2 3 5 9 10 12 26 特 20</div><div class="cp-bets"><span class="bet"><span class="bn">8</span><span class="bn hit">9</span><span class="bn">14</span><span class="bn">20</span><span class="bn">24</span><span class="bn hit">26</span><span class="bn">28</span><span class="bn">4</span></span><span class="bet"><span class="bn">2</span><span class="bn">10</span><span class="bn">14</span><span class="bn hit">22</span><span class="bn">27</span><span class="bn">28</span><span class="bn">30</span><span class="bn">29</span></span><span class="bet"><span class="bn">1</span><span class="bn">3</span><span class="bn">6</span><span class="bn">13</span><span class="bn">14</span><span class="bn hit">22</span><span class="bn">25</span><span class="bn">28</span></span><span class="bet"><span class="bn">1</span><span class="bn">5</span><span class="bn">6</span><span class="bn">13</span><span class="bn">14</span><span class="bn hit">23</span><span class="bn">29</span><span class="bn">21</span></span><span class="bet"><span class="bn">2</span><span class="bn">3</span><span class="bn">5</span><span class="bn hit">9</span><span class="bn">10</span><span class="bn">12</span><span class="bn hit">26</span><span class="bn">20</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
             
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">4</span><span class="bn">5</span><span class="bn">7</span><span class="bn">11</span><span class="bn">17</span><span class="bn hit">21</span><span class="bn">29</span><span class="bn">12</span></span><span class="fun-hit">命中1</span></div></div>
+            
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
                 <div class="num-row"><span class="ball ball-red">09</span><span class="ball ball-red">16</span><span class="ball ball-red">18</span><span class="ball ball-red">21</span><span class="ball ball-red">22</span><span class="ball ball-red">23</span><span class="ball ball-red">26</span><span class="sep">+</span><span class="ball ball-blue">27</span></div>
@@ -203,6 +229,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
                 <span class="grp-stat">投入 ¥20.0 ｜ 中奖 2/10 注 ｜ 中奖 ¥6</span>
             </h4>
             <div class="compound-plan">🎫 投注方案：<b>快乐8 选三 10注（单式，¥20）</b>（10 注 × ¥2.0 = <b>¥20.0</b>）<div class="cp-desc">每注选 3 码（口诀+螺旋矩阵，不杀区），共 10 注</div><div class="cp-bets"><span class="bet"><span class="bn">12</span><span class="bn">17</span><span class="bn hit">72</span></span><span class="bet"><span class="bn">22</span><span class="bn">46</span><span class="bn hit">76</span></span><span class="bet"><span class="bn">43</span><span class="bn hit">56</span><span class="bn">65</span></span><span class="bet"><span class="bn">19</span><span class="bn hit">37</span><span class="bn hit">44</span></span><span class="bet"><span class="bn">14</span><span class="bn hit">20</span><span class="bn">68</span></span><span class="bet"><span class="bn">11</span><span class="bn">13</span><span class="bn hit">53</span></span><span class="bet"><span class="bn">7</span><span class="bn">41</span><span class="bn">59</span></span><span class="bet"><span class="bn">23</span><span class="bn">25</span><span class="bn hit">35</span></span><span class="bet"><span class="bn">24</span><span class="bn hit">57</span><span class="bn">60</span></span><span class="bet"><span class="bn">18</span><span class="bn hit">48</span><span class="bn hit">50</span></span></div><div class="cp-verdict none">方案比对：未中奖</div></div>
+            <div class="gold"><span class="gold-lbl">金胆选</span><span class="gold-nums"><span class="bn">17</span><span class="bn">12</span><span class="bn hit">76</span><span class="bn hit">56</span></span><span class="gold-note">评分前4 · 仅参考 · 金胆命中 2/4</span></div>
+            <div class="fun-picks"><div class="fun-title">🎲 趣味参考 · 不计入投注统计</div><div class="fun-row fun-xuanxue"><span class="fun-lbl">🔮玄学·易经</span><span class="fun-nums"><span class="bn">6</span><span class="bn">23</span><span class="bn">41</span><span class="bn">51</span><span class="bn hit">63</span></span><span class="fun-hit">命中1</span></div></div>
             
             <div class="win-block">
                 <div class="win-label">🎯 今日开奖号码</div>
