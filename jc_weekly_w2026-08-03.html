@@ -42,6 +42,12 @@ td.ok{color:#059669;font-weight:700;} td.bad{color:#d64545;font-weight:700;}
 .foot b{color:#fff;}
 .empty{color:#9aa5b1;text-align:center;padding:22px 0;font-size:13px;}
 </style>
+<style id="nav-center-fix">
+/* 导航入口统一居中（2026-09-15 用户要求：数字彩/竞猜页面顶部入口一律居中） */
+.nav-inner,.portal-nav,.nav{justify-content:center;}
+.portal-nav select,.nav select,.nav-inner select{margin-left:6px;}
+@media(max-width:720px){.nav-inner,.portal-nav,.nav{justify-content:center;}}
+</style>
 </head>
 <body>
 <div class="nav"><div class="nav-inner"><span class="brand">🎱 彩票预测门户</span><a href="daily_today.html">今日预测</a><a href="index.html">竞猜</a><a href="daily.html">日报</a><a href="weekly.html">周报</a><a href="jc_weekly.html" class="active">竞猜周报</a><a href="jc_daily.html">竞猜日报</a><a href="jc_accuracy.html">准确率</a></div></div>
