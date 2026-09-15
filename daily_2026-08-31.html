@@ -89,6 +89,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 .disclaimer { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 16px; margin: 20px 0; color: #795548; font-size: 13px; text-align: center; }
 @media (max-width: 768px) { .overview { grid-template-columns: repeat(2, 1fr); } .header h1 { font-size: 22px; } }
 </style>
+<style id="nav-center-fix">
+/* 导航入口统一居中（2026-09-15 用户要求：数字彩/竞猜页面顶部入口一律居中） */
+.nav-inner,.portal-nav,.nav{justify-content:center;}
+.portal-nav select,.nav select,.nav-inner select{margin-left:6px;}
+@media(max-width:720px){.nav-inner,.portal-nav,.nav{justify-content:center;}}
+</style>
 </head>
 <body><div class="portal-nav"><span class="bn">🎱 彩票预测门户</span><a href="daily_today.html" class="">今日预测</a><a href="index.html" class="">竞猜</a><a href="daily.html" class="on">日报</a><a href="weekly.html" class="">周报</a><a href="jc_weekly.html" class="">竞猜周报</a><a href="jc_daily.html" class="">竞猜日报</a><a href="jc_accuracy.html" class="">准确率</a><select onchange="location.href=this.value"><option value="daily_2026-09-07.html">📅 2026-09-07</option><option value="daily_2026-09-05.html">📅 2026-09-05</option><option value="daily_2026-09-04.html">📅 2026-09-04</option><option value="daily_2026-09-03.html">📅 2026-09-03</option><option value="daily_2026-09-02.html">📅 2026-09-02</option><option value="daily_2026-09-01.html">📅 2026-09-01</option><option value="daily_2026-08-31.html" selected>📅 2026-08-31</option></select></div>
 
