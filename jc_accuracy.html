@@ -79,6 +79,12 @@ tr:hover td{background:#f8fafc;}
 
 }
 </style>
+<style id="nav-center-fix">
+/* 导航入口统一居中（2026-09-15 用户要求：数字彩/竞猜页面顶部入口一律居中） */
+.nav-inner,.portal-nav,.nav{justify-content:center;}
+.portal-nav select,.nav select,.nav-inner select{margin-left:6px;}
+@media(max-width:720px){.nav-inner,.portal-nav,.nav{justify-content:center;}}
+</style>
 </head>
 <body>
 <div class="nav"><div class="nav-inner"><span class="brand">🎱 彩票预测门户</span><a href="daily_today.html">今日预测</a><a href="index.html">竞猜</a><a href="daily.html">日报</a><a href="weekly.html">周报</a><a href="jc_weekly.html">竞猜周报</a><a href="jc_daily.html">竞猜日报</a><a href="jc_accuracy.html" class="active">准确率</a></div></div>
