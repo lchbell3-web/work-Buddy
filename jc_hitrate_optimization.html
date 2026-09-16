@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竞彩命中率优化归因报告 · 2026-09-16</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;margin:0;background:#eef1f6;color:#1f2937;}
+.nav{background:linear-gradient(135deg,#0b2a4a,#123a63);color:#fff;padding:0 16px;display:flex;align-items:center;justify-content:center;min-height:52px;flex-wrap:wrap;gap:4px;}
+.nav .brand{font-weight:700;font-size:16px;margin-right:16px;}
+.nav a{color:#dbe7f5;text-decoration:none;padding:7px 14px;border-radius:7px;font-size:13px;}
+.nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+.container{max-width:1080px;margin:0 auto;padding:18px 20px 40px;}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 3px rgba(16,42,84,.05);}
+h2{margin:0 0 6px;font-size:17px;color:#0b2a4a;}
+h2::before{content:"";display:inline-block;width:4px;height:16px;background:#e53935;border-radius:2px;margin-right:8px;vertical-align:-2px;}
+.sub{color:#6b7280;font-size:13px;margin:4px 0 12px;}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0;}
+.kpi{flex:1;min-width:130px;border-radius:10px;padding:13px 10px;text-align:center;color:#fff;background:linear-gradient(135deg,#0b2a4a,#123a63);}
+.kpi div{font-size:12px;opacity:.85;}
+.kpi b{font-size:22px;display:block;margin:3px 0;}
+.kpi small{font-size:11px;opacity:.8;}
+.kpi.green{background:linear-gradient(135deg,#0e9f6e,#059669);}
+.kpi.red{background:linear-gradient(135deg,#d64545,#b91c1c);}
+.kpi.amber{background:linear-gradient(135deg,#d97706,#b45309);}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:#0b2a4a;color:#fff;padding:8px;font-weight:600;}
+td{border-bottom:1px solid #e2e8f0;padding:7px 8px;text-align:center;}
+tr:nth-child(even) td{background:#f8fafd;}
+td.l{text-align:left;}
+.pos{color:#059669;font-weight:700;} .neg{color:#d64545;font-weight:700;}
+.wrap{overflow-x:auto;}
+.foot{margin:24px 0 0;padding:14px 20px;background:#0b2a4a;border-radius:10px;color:#c9d8ea;font-size:12px;line-height:2;}
+.foot b{color:#fff;}
+</style></head><body>
+<div class="nav"><span class="brand">🎱 彩票预测门户</span>
+<a href="daily_today.html">今日预测</a><a href="index.html">竞猜</a><a href="daily.html">日报</a>
+<a href="weekly.html">周报</a><a href="jc_weekly.html">竞猜周报</a><a href="jc_daily.html">竞猜日报</a>
+<a href="jc_accuracy.html">准确率</a></div>
+<div class="container">
+<div class="card">
+  <h2>🧭 竞彩足球/篮球 命中率优化归因报告</h2>
+  <p class="sub">样本区间 2026-08-08 ~ 2026-09-16，共 <b>612</b> 场已完赛配对样本；
+  时间切分：训练段 398 场（2026-08-08~2026-09-04），
+  验证段 214 场（2026-09-05~2026-09-16）。生成时间 2026-09-16 15:52</p>
+  <div class="kpis">
+    <div class="kpi "><div>全量样本</div><b>612</b><small>足球517 / 篮球95</small></div>
+    <div class="kpi green"><div>总命中</div><b>312</b><small>主玩法命中 300 场失误</small></div>
+    <div class="kpi "><div>总准确率</div><b>51.0%</b><small>主玩法口径</small></div>
+    <div class="kpi green"><div>全量平注ROI</div><b>8.4%</b><small>有效赔率 578 场</small></div>
+    <div class="kpi red"><div>本轮新场次</div><b>24</b><small>2026-09-14之后 命中41.7% / ROI-7.5%</small></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>1. 当前命中率现状（各玩法 / 各运动 / 各档）</h2>
+  <div class="wrap"><table>
+    <tr><th>维度</th><th>样本</th><th>失误</th><th>准确率</th><th>平注ROI</th></tr>
+    <tr><td class='l' colspan='5'><b>按玩法（胜平负/让球/让分）</b></td></tr><tr><td class='l'>胜平负</td><td>26</td><td>13</td><td><b>50.0%</b></td><td>-6.2%</td></tr><tr><td class='l'>让球</td><td>491</td><td>245</td><td><b>50.1%</b></td><td>4.9%</td></tr><tr><td class='l'>让分</td><td>95</td><td>42</td><td><b>55.8%</b></td><td>29.2%</td></tr>
+    <tr><td class='l' colspan='5'><b>按运动</b></td></tr><tr><td class='l'>足球</td><td>517</td><td>258</td><td><b>50.1%</b></td><td>4.5%</td></tr><tr><td class='l'>篮球</td><td>95</td><td>42</td><td><b>55.8%</b></td><td>29.2%</td></tr>
+    <tr><td class='l' colspan='5'><b>按风险等级</b></td></tr><tr><td class='l'>低</td><td>70</td><td>38</td><td><b>45.7%</b></td><td>6.9%</td></tr><tr><td class='l'>中</td><td>291</td><td>151</td><td><b>48.1%</b></td><td>14.9%</td></tr><tr><td class='l'>高</td><td>241</td><td>106</td><td><b>56.0%</b></td><td>0.8%</td></tr><tr><td class='l'>未标注</td><td>10</td><td>5</td><td><b>50.0%</b></td><td>—</td></tr>
+    <tr><td class='l' colspan='5'><b>按信心区间</b></td></tr><tr><td class='l'>信心<50%</td><td>349</td><td>168</td><td><b>51.9%</b></td><td>0.1%</td></tr><tr><td class='l'>信心50-55%</td><td>88</td><td>41</td><td><b>53.4%</b></td><td>29.9%</td></tr><tr><td class='l'>信心55-60%</td><td>71</td><td>36</td><td><b>49.3%</b></td><td>14.4%</td></tr><tr><td class='l'>信心60-65%</td><td>40</td><td>19</td><td><b>52.5%</b></td><td>16.7%</td></tr><tr><td class='l'>信心≥65%</td><td>64</td><td>36</td><td><b>43.8%</b></td><td>10.2%</td></tr>
+    <tr><td class='l' colspan='5'><b>按预测方向</b></td></tr><tr><td class='l'>胜</td><td>18</td><td>10</td><td><b>44.4%</b></td><td>-8.8%</td></tr><tr><td class='l'>平</td><td>3</td><td>2</td><td><b>33.3%</b></td><td>6.7%</td></tr><tr><td class='l'>负</td><td>5</td><td>1</td><td><b>80.0%</b></td><td>—</td></tr><tr><td class='l'>让胜</td><td>287</td><td>135</td><td><b>53.0%</b></td><td>11.0%</td></tr><tr><td class='l'>让平</td><td>80</td><td>59</td><td><b>26.2%</b></td><td>-6.0%</td></tr><tr><td class='l'>让负</td><td>219</td><td>93</td><td><b>57.5%</b></td><td>11.7%</td></tr>
+  </table></div>
+</div>
+
+<div class="card">
+  <h2>2. 失误归因（联赛榜 · 赔率层 · 近期恶化）</h2>
+  <p class="sub"><b>联赛失误榜（前15，按失误数降序）</b></p>
+  <div class="wrap"><table>
+    <tr><th>联赛</th><th>样本</th><th>失误</th><th>命中率</th><th>平注ROI</th></tr>
+    <tr><td class='l'>西甲</td><td>52</td><td>26</td><td><b>50.0%</b></td><td>0.7%</td></tr><tr><td class='l'>意甲</td><td>38</td><td>20</td><td><b>47.4%</b></td><td>1.8%</td></tr><tr><td class='l'>美职女篮</td><td>43</td><td>18</td><td><b>58.1%</b></td><td>38.1%</td></tr><tr><td class='l'>荷甲</td><td>28</td><td>18</td><td><b>35.7%</b></td><td>-15.3%</td></tr><tr><td class='l'>葡超</td><td>28</td><td>18</td><td><b>35.7%</b></td><td>-1.2%</td></tr><tr><td class='l'>欧冠</td><td>27</td><td>17</td><td><b>37.0%</b></td><td>-52.5%</td></tr><tr><td class='l'>英超</td><td>35</td><td>16</td><td><b>54.3%</b></td><td>10.4%</td></tr><tr><td class='l'>沙职</td><td>25</td><td>14</td><td><b>44.0%</b></td><td>4.9%</td></tr><tr><td class='l'>世预男篮</td><td>25</td><td>14</td><td><b>44.0%</b></td><td>-1.1%</td></tr><tr><td class='l'>瑞超</td><td>21</td><td>14</td><td><b>33.3%</b></td><td>-25.3%</td></tr><tr><td class='l'>韩职</td><td>24</td><td>11</td><td><b>54.2%</b></td><td>1.7%</td></tr><tr><td class='l'>英冠</td><td>26</td><td>10</td><td><b>61.5%</b></td><td>0.1%</td></tr><tr><td class='l'>日职</td><td>23</td><td>10</td><td><b>56.5%</b></td><td>28.8%</td></tr><tr><td class='l'>法甲</td><td>21</td><td>9</td><td><b>57.1%</b></td><td>49.3%</td></tr><tr><td class='l'>世杯女篮</td><td>15</td><td>9</td><td><b>40.0%</b></td><td>-9.5%</td></tr>
+  </table></div>
+  <p class="sub" style="margin-top:14px"><b>赔率区间切分（全量）</b></p>
+  <div class="wrap"><table>
+    <tr><th>赔率区间</th><th>样本</th><th>失误</th><th>命中率</th><th>平注ROI</th></tr>
+    <tr><td class='l'>赔率<1.5</td><td>65</td><td>29</td><td><b>55.4%</b></td><td>-20.9%</td></tr><tr><td class='l'>赔率1.5-1.8</td><td>112</td><td>39</td><td><b>65.2%</b></td><td>4.9%</td></tr><tr><td class='l'>赔率1.8-2.2</td><td>121</td><td>53</td><td><b>56.2%</b></td><td>12.7%</td></tr><tr><td class='l'>赔率2.2-2.8</td><td>134</td><td>67</td><td><b>50.0%</b></td><td>19.5%</td></tr><tr><td class='l'>赔率2.8-3.5</td><td>66</td><td>46</td><td><b>30.3%</b></td><td>-4.6%</td></tr><tr><td class='l'>赔率>3.5</td><td>80</td><td>55</td><td><b>31.2%</b></td><td>22.6%</td></tr><tr><td class='l'>无赔率</td><td>34</td><td>11</td><td><b>67.6%</b></td><td>—</td></tr>
+  </table></div>
+  <p class="sub" style="margin-top:14px"><b>近期恶化对比（2026-09-14之后 vs 之前）</b></p>
+  <div class="wrap"><table>
+    <tr><th>维度</th><th>历史（旧）</th><th>本轮新场次</th></tr>
+    <tr><td class='l' colspan='5'><b>按预测方向（旧=≤2026-09-14 / 新=>2026-09-14）</b></td></tr><tr><td class='l'>平</td><td>旧3场/33.3%/6.7%</td><td>新0场/—/—</td></tr><tr><td class='l'>胜</td><td>旧18场/44.4%/-8.8%</td><td>新0场/—/—</td></tr><tr><td class='l'>让平</td><td>旧80场/26.2%/-6.0%</td><td>新0场/—/—</td></tr><tr><td class='l'>让胜</td><td>旧278场/53.6%/12.3%</td><td>新9场/33.3%/-25.7%</td></tr><tr><td class='l'>让负</td><td>旧204场/58.3%/12.3%</td><td>新15场/46.7%/3.4%</td></tr><tr><td class='l'>负</td><td>旧5场/80.0%/—</td><td>新0场/—/—</td></tr><tr><td class='l' colspan='5'><b>按赔率区间</b></td></tr><tr><td class='l'>无赔率</td><td>旧34场/67.6%/—</td><td>新0场/—/—</td></tr><tr><td class='l'>赔率1.5-1.8</td><td>旧108场/66.7%/7.1%</td><td>新4场/25.0%/-55.5%</td></tr><tr><td class='l'>赔率1.8-2.2</td><td>旧114场/56.1%/12.4%</td><td>新7场/57.1%/17.1%</td></tr><tr><td class='l'>赔率2.2-2.8</td><td>旧125场/49.6%/18.4%</td><td>新9场/55.6%/35.8%</td></tr><tr><td class='l'>赔率2.8-3.5</td><td>旧65场/30.8%/-3.2%</td><td>新1场/0.0%/-100.0%</td></tr><tr><td class='l'>赔率<1.5</td><td>旧62场/58.1%/-17.1%</td><td>新3场/0.0%/-100.0%</td></tr><tr><td class='l'>赔率>3.5</td><td>旧80场/31.2%/22.6%</td><td>新0场/—/—</td></tr><tr><td class='l' colspan='5'><b>按风险等级</b></td></tr><tr><td class='l'>中</td><td>旧277场/47.7%/14.2%</td><td>新14场/57.1%/28.2%</td></tr><tr><td class='l'>低</td><td>旧69场/44.9%/5.6%</td><td>新1场/100.0%/96.0%</td></tr><tr><td class='l'>未标注</td><td>旧10场/50.0%/—</td><td>新0场/—/—</td></tr><tr><td class='l'>高</td><td>旧232场/57.8%/3.9%</td><td>新9场/11.1%/-74.6%</td></tr>
+  </table></div>
+  <p class="sub">🔍 近期恶化集中在：高风险（高冷门）本轮命中仅 11.1%、让胜方向近期 9 场命中 33.3%、
+  低赔超热门（&lt;1.5）与 1.5-1.8 档近期近乎全黑。其中「高冷门排除」「让平平仓」「超热门降仓」已在生产落地。</p>
+</div>
+
+<div class="card">
+  <h2>3. 候选规则时间切分回测（训练段 vs 验证段）</h2>
+  <p class="sub">基线：训练段 n=398 命中 49.2% ROI 9.9%；
+  验证段 n=214 命中 54.2% ROI 5.4%。
+  通过门槛：验证段 n≥50、验证段 ROI&gt;0 或准确率提升≥5pp、训练/验证方向一致；
+  显著性用二项 z 检验（|z|≥1.96 才算显著）。</p>
+  <div class="wrap"><table>
+    <tr><th>候选规则（含依据）</th><th>训练n</th><th>训练命中</th><th>训练ROI</th>
+    <th>验证n</th><th>验证命中</th><th>验证ROI</th><th>验证提升</th><th>z值</th><th>是否通过</th></tr>
+    <tr><td class='l'><b>剔除低赔超热门（赔率<1.5）</b><br><small style='color:#6b7280'>全量该档65场命中55.4%但平注ROI -20.9%，属「高命中低赔换来的负期望」；训练/验证两段剔除后ROI均上行。</small></td><td>355</td><td>48.5%</td><td>13.8%</td><td>192</td><td>54.2%</td><td>8.7%</td><td class=''>0.0pp</td><td>-0.01</td><td><span style='color:#059669;font-weight:700'>通过</span></td></tr><tr><td class='l'><b>剔除死亡赔率带（2.8≤赔率<3.5）</b><br><small style='color:#6b7280'>全量该档66场命中仅30.3%、ROI -4.6%，是唯一命中显著低于随机且负收益的中段赔率。</small></td><td>340</td><td>52.9%</td><td>13.7%</td><td>206</td><td>54.4%</td><td>3.9%</td><td class='pos'>0.2pp</td><td>0.05</td><td><span style='color:#d64545'>未过</span></td></tr><tr><td class='l'><b>剔除过度自信档（信心≥0.65）</b><br><small style='color:#6b7280'>全量该档64场命中43.8%，低于基线，属历史已知的过度自信区间（≥65%档曾校准为-12.0pp）。</small></td><td>334</td><td>50.3%</td><td>9.9%</td><td>214</td><td>54.2%</td><td>5.4%</td><td class=''>0.0pp</td><td>0.0</td><td><span style='color:#d64545'>未过</span></td></tr><tr><td class='l'><b>抬高最高单选概率门槛（p_max≥0.50）</b><br><small style='color:#6b7280'>0.45-0.55区间125场命中仅43.2%，抬门槛可砍掉模型最「摇摆」的一档。</small></td><td>95</td><td>51.6%</td><td>30.5%</td><td>34</td><td>47.1%</td><td>-1.4%</td><td class='neg'>-7.1pp</td><td>-0.84</td><td><span style='color:#d64545'>未过</span></td></tr><tr><td class='l'><b>剔除主胜方向（pred=胜）</b><br><small style='color:#6b7280'>全量主胜18场命中44.4%、ROI -8.8%，为胜平负三向中唯一负收益方向。</small></td><td>383</td><td>49.6%</td><td>10.7%</td><td>211</td><td>54.0%</td><td>5.4%</td><td class='neg'>-0.2pp</td><td>-0.05</td><td><span style='color:#d64545'>未过</span></td></tr><tr><td class='l'><b>只保留甜蜜赔率带（1.5≤赔率<2.8）</b><br><small style='color:#6b7280'>1.5-2.8三段合计命中约56%、ROI为正，尝试用赔率带做正向白名单。</small></td><td>202</td><td>59.4%</td><td>18.7%</td><td>165</td><td>53.3%</td><td>5.6%</td><td class='neg'>-0.9pp</td><td>-0.22</td><td><span style='color:#059669;font-weight:700'>通过</span></td></tr><tr><td class='l'><b>剔除低赔超热门并剔除死亡带</b><br><small style='color:#6b7280'>把第一条与第二条叠加：同时砍掉<1.5与[2.8,3.5)两段负收益区间。</small></td><td>297</td><td>52.5%</td><td>19.0%</td><td>184</td><td>54.3%</td><td>7.2%</td><td class='pos'>0.1pp</td><td>0.04</td><td><span style='color:#059669;font-weight:700'>通过</span></td></tr>
+  </table></div>
+</div>
+
+<div class="card">
+  <h2>4. 落地清单</h2>
+  <p class='sub'><b>本轮无规则落地，未改动任何生产代码。</b></p><p class='sub'>数值上达标的 3 条候选（剔除低赔超热门、甜蜜赔率带白名单、两者叠加）均围绕赔率区间：低赔信号已被生产<b>「超热门降仓×0.5」</b>对冲，且代码注释记载 2026-09-03 用户已把原「胜赔&lt;1.45 剔除」改为「降仓」，新增剔除会反向该决定；甜蜜带白名单训练段强、验证段精度反降 0.9pp，属过拟合。此外全部候选验证段准确率相对基线提升约 0pp，二项 |z|&lt;0.22（远未到 1.96 显著线）。<b>综合判断：无一条值得反向已记录决定、立即写入生产，故本轮不落地。</b></p>
+  <p class="sub">本轮<b>未备份、未修改</b>任何生产文件（gen_jc_daily.py / gen_crossday_jc.py / engine/ 均保持原样）。
+  历史预测数据与 .bak 文件一律未动。</p>
+</div>
+
+<div class="card">
+  <h2>5. 挂起观察候选列表（未达门槛或已对冲）</h2>
+  <div class="wrap"><table>
+    <tr><th>候选</th><th>验证n</th><th>验证命中</th><th>验证ROI</th><th>挂起原因</th></tr>
+    <tr><td class='l'><b>剔除死亡赔率带（2.8≤赔率<3.5）</b></td><td>验证段 n=206</td><td>命中54.4%</td><td>ROI3.9%</td><td class='l'>验证段仅剔除8场，规则近乎空转、无实质过滤；验证段相对基线 ROI 未提升且准确率提升<5pp；训练段正、验证段ROI转负，方向不一致</td></tr><tr><td class='l'><b>剔除过度自信档（信心≥0.65）</b></td><td>验证段 n=214</td><td>命中54.2%</td><td>ROI5.4%</td><td class='l'>验证段仅剔除0场，规则近乎空转、无实质过滤；验证段相对基线 ROI 未提升且准确率提升<5pp</td></tr><tr><td class='l'><b>抬高最高单选概率门槛（p_max≥0.50）</b></td><td>验证段 n=34</td><td>命中47.1%</td><td>ROI-1.4%</td><td class='l'>验证段样本不足50场；验证段相对基线 ROI 未提升且准确率提升<5pp；训练段正、验证段ROI转负，方向不一致</td></tr><tr><td class='l'><b>剔除主胜方向（pred=胜）</b></td><td>验证段 n=211</td><td>命中54.0%</td><td>ROI5.4%</td><td class='l'>验证段仅剔除3场，规则近乎空转、无实质过滤；验证段相对基线 ROI 未提升且准确率提升<5pp</td></tr><tr><td class='l'><b>剔除低赔超热门（赔率<1.5）</b>（数值达标）</td><td>验证段 n=192</td><td>命中54.2%</td><td>ROI8.7%</td><td class='l'>本质是「低赔超热门负收益」信号，生产已用「超热门降仓×0.5」对冲；完全剔除会反向 2026-09-03 已记录用户决定；验证段精度 z≈0.01 不显著</td></tr><tr><td class='l'><b>只保留甜蜜赔率带（1.5≤赔率<2.8）</b>（数值达标）</td><td>验证段 n=165</td><td>命中53.3%</td><td>ROI5.6%</td><td class='l'>训练段强（ROI +8.8pp）但验证段精度反降 0.9pp、ROI 仅 +0.2pp，属训练段过拟合、外推失效，不落地</td></tr><tr><td class='l'><b>剔除低赔超热门并剔除死亡带</b>（数值达标）</td><td>验证段 n=184</td><td>命中54.3%</td><td>ROI7.2%</td><td class='l'>与第一条同源（低赔信号已被降仓对冲），叠加死亡带在验证段仅剔除 8 场、边际贡献≈0；精度 z≈0.04 不显著</td></tr>
+  </table></div>
+</div>
+
+<div class="foot"><b>免责声明</b>：竞彩为独立随机事件，历史回测不构成投注建议。本报告仅为模型口径的统计归因与算法门槛调优参考，
+历史命中率与回报率不代表未来表现，请理性购彩、量力而行。</div>
+</div></body></html>
