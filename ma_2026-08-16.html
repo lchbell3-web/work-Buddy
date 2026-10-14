@@ -101,6 +101,12 @@
 .nfull summary::after{content:"）";font-weight:400;color:#8a94a3;}
 .nfull .full{color:#555;font-size:12px;margin-top:4px;line-height:1.65;}
 .mhead-note details{font-size:12px;}
+/* ── 赛前情报折叠块（2026-10-14：默认展开、可点收起） ── */
+.inteldt{margin:2px 0;}
+.inteldt>summary{cursor:pointer;font-size:13px;font-weight:700;color:#2c3e50;list-style:none;display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+.inteldt>summary::-webkit-details-marker{display:none;}
+.inteldt>summary::before{content:"\25B8";color:#3563a8;font-size:11px;margin-right:2px;}
+.inteldt[open]>summary::before{content:"\25BE";}
 
 .deep{margin:7px 0 2px;border:1px solid #e3ebf6;border-radius:8px;background:#fbfdff}
 .deep>summary{cursor:pointer;padding:7px 10px;font-size:12.5px;font-weight:600;color:#3563a8;list-style:none;outline:none}
