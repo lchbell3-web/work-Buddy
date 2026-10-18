@@ -33,6 +33,35 @@
   img{max-width:100%;height:auto;}
   pre{white-space:pre-wrap;word-break:break-all;}
 }
+
+  .portal-nav{background:linear-gradient(135deg,#0b2a4a,#1e4a7a);color:#fff;padding:0 16px;
+    position:sticky;top:0;z-index:99;display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;min-height:50px;
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;box-shadow:0 2px 10px rgba(11,42,74,.25);}
+  .portal-nav .bn{font-weight:700;margin-right:14px;font-size:15px;letter-spacing:.4px;}
+  .portal-nav a{color:#dbe7f5;text-decoration:none;padding:7px 15px;border-radius:8px;font-size:13px;font-weight:600;transition:all .18s;}
+  .portal-nav a:hover{background:rgba(255,255,255,.15);color:#fff;}
+  .portal-nav a.on{background:linear-gradient(135deg,#e53935,#d32f2f);color:#fff;box-shadow:0 2px 8px rgba(229,57,53,.4);}
+  .portal-nav select{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
+    border-radius:6px;padding:5px 8px;font-size:12px;margin-left:6px;}
+  .portal-nav select option{color:#1f2937;}
+  @media(max-width:720px){
+    .portal-nav{padding:6px 8px;gap:3px;min-height:auto;}
+    .portal-nav .bn{width:100%;margin-right:0;font-size:14px;}
+    .portal-nav a{padding:6px 10px;font-size:12.5px;}
+    .portal-nav select{margin-left:0;margin-top:2px;max-width:100%;}
+  }
+
+/* —— 通用手机阅读规则（2026-10-11 用户要求：所有页面都适合手机阅读）—— */
+@media(max-width:720px){
+  body{font-size:13.5px;}
+  .container{padding:12px 10px 32px;}
+  .wrap{padding:12px 10px;}
+  .card{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{font-size:12px;}
+  th,td{padding:6px 5px;white-space:normal;}
+  img{max-width:100%;height:auto;}
+  pre{white-space:pre-wrap;word-break:break-all;}
+}
   *{box-sizing:border-box}
   body{font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",sans-serif;margin:0;background:#f0f4f9;color:#1f2937;}
   .nav{background:linear-gradient(135deg,#0b2a4a,#1e4a7a);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(11,42,74,.28);}
@@ -147,18 +176,7 @@
   }
 </style>
 </head>
-<body>
-<div class="nav"><div class="nav-inner">
-  <span class="brand">🎱 彩票预测门户</span>
-  <a href="ma.html" class="active">逐场分析</a>
-  <a href="jc_daily.html">分析日报</a>
-  <a href="daily_today.html">今日预测</a>
-  <a href="sfc.html">传统足彩</a>
-  <a href="sfc_daily.html">足彩日报</a>
-  <a href="daily.html">日报</a>
-  <a href="weekly.html">周报</a>
-  
-</div></div>
+<body><div class="portal-nav"><span class="bn">🎱 彩票预测门户</span><a href="ma.html" class="on">逐场分析</a><a href="jc_daily.html" class="">分析日报</a><a href="daily_today.html" class="">今日预测</a><a href="sfc.html" class="">传统足彩</a><a href="sfc_daily.html" class="">足彩日报</a><a href="daily.html" class="">日报</a><a href="weekly.html" class="">周报</a></div>
 <div class="container">
   <div class="card">
   <h2>📊 逐场分析总览（2026-10-18）</h2>
@@ -180,8 +198,8 @@
   </div>
 </div>
 <div class="foot">
-  <b>规则</b>：彩票按用户定制（全部改直选/单式，不买复式/胆拖/位选复式，金额不变：快乐8/排列5 各 3 注、双色球 直选5注/七星彩 直选5注/七乐彩 直选5注/排列3·3D 直选5注 均≤¥10、大乐透 直选6注≤¥20）、预测=投注号码逐注执行；竞猜每日限额 ¥100、不限玩法、最低 2串1、可跨天买入、每场多角度分析并提示爆冷（5 维度）。<br>
-  <b>免责声明</b>：彩票与竞彩均为独立随机事件，本系统仅供娱乐参考，请理性购彩；投注请以官方渠道规则为准。
+  <b>免责声明</b>：彩票与竞彩均为独立随机事件，本系统仅供数据分析与历史复盘，不构成投注建议，请理性购彩。<br>
+  <b>说明</b>：本门户 2026-10-18 起以逐场分析为主，不再提供竞猜推荐、串关与投注方案。
 </div>
 </body>
 </html>
