@@ -1,204 +1,135 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>竞猜日报 2026-08-31 · 彩票预测门户</title>
-<style>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>逐场分析日报 2026-08-31</title><style>
+:root{--bg:#f6f7fb;--card:#fff;--line:#e4e7ee;--ink:#1c2333;--dim:#6b7280;--accent:#3563a8;
+--ok:#2e7d32;--bad:#c62828;--warn:#e65100}
 *{box-sizing:border-box}
-body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;margin:0;background:#eef1f6;color:#1f2937;}
-.nav{background:linear-gradient(135deg,#0b2a4a,#123a63);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.2);}
-.nav-inner{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;min-height:54px;}
-.nav .brand{font-weight:700;font-size:16px;margin-right:18px;letter-spacing:.5px;}
-.nav a{color:#dbe7f5;text-decoration:none;padding:8px 16px;border-radius:8px;font-size:14px;transition:.15s;}
-.nav a:hover{background:rgba(255,255,255,.14);color:#fff;}
-.nav a.active{background:#e53935;color:#fff;font-weight:600;}
-.container{max-width:1120px;margin:0 auto;padding:18px 20px 40px;}
-.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;margin:14px 0;box-shadow:0 1px 3px rgba(16,42,84,.05);}
-h2{margin:0 0 4px;font-size:17px;color:#0b2a4a;}
-.sub{color:#6b7280;font-size:13px;margin:6px 0 12px;}
-.kpis{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 6px;}
-.kpi{flex:1;min-width:130px;border-radius:10px;padding:13px 10px;text-align:center;color:#fff;background:linear-gradient(135deg,#0b2a4a,#123a63);}
-.kpi div{font-size:12px;opacity:.85;}
-.kpi b{font-size:21px;display:block;margin:3px 0;}
-.kpi small{font-size:11px;opacity:.8;display:block;}
-.kpi.green{background:linear-gradient(135deg,#0e9f6e,#059669);}
-.kpi.red{background:linear-gradient(135deg,#d64545,#b91c1c);}
-.kpi.amber{background:linear-gradient(135deg,#d97706,#b45309);}
-table{width:100%;border-collapse:collapse;font-size:13px;}
-th{background:#0b2a4a;color:#fff;padding:9px 8px;font-weight:600;}
-td{border-bottom:1px solid #e2e8f0;padding:8px;text-align:center;}
-tr:nth-child(even) td{background:#f8fafd;}
-td.l{text-align:left;} td.small{font-size:12px;color:#57606f;}
-td.ok{color:#059669;font-weight:700;} td.bad{color:#d64545;font-weight:700;}
-.vs{color:#9aa5b1;font-size:11px;}
-.lgdate{color:#e53935;font-weight:700;font-size:11px;border:1px solid #f3b6b0;background:#fdeceb;border-radius:4px;padding:0 4px;}
-.parlay-tag{display:inline-block;font-size:10px;font-weight:600;color:#64748b;background:#f1f5f9;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:middle;}
-.wrap{overflow-x:auto;}
-.switch{display:inline-flex;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden;margin:10px 0 2px;font-size:13px;}
-.switch a{padding:7px 18px;text-decoration:none;color:#0b2a4a;background:#fff;}
-.switch a.on{background:#e53935;color:#fff;font-weight:600;}
-.foot{margin:24px 0 0;padding:14px 20px;background:#0b2a4a;border-radius:10px;color:#c9d8ea;font-size:12px;line-height:2;}
-.foot b{color:#fff;}
-.empty{color:#9aa5b1;text-align:center;padding:22px 0;font-size:13px;}
-@media(max-width:720px){
-  .nav-inner{padding:6px 10px;gap:4px;min-height:auto;}
-  .nav .brand{width:100%;margin-right:0;font-size:15px;padding-bottom:2px;}
-  .nav a{padding:6px 11px;font-size:13px;}
-  .nav select{max-width:100%!important;width:100%;margin-left:0!important;margin-top:4px;font-size:13px;}
-  .container{padding:12px 10px 32px;}
-  .card{padding:14px 12px;border-radius:12px;}
-  h2{font-size:16px;}
-  table{font-size:12px;}
-  th{padding:8px 6px;white-space:normal;}
-  td{padding:7px 5px;}
-  .kpi{min-width:110px;padding:11px 8px;}
-  .kpi b{font-size:19px;}
-  .switch a{padding:6px 12px;font-size:12px;}
-  .foot{padding:14px 14px;font-size:11px;line-height:1.9;}
-}
-
-  .ud{display:inline-block;font-size:10px;border-radius:4px;padding:1px 5px;color:#1f2937;background:#eef1f6;border:1px solid #dbe2ea;margin:1px;}
-  /* 竞彩比赛编号（周日001…）：加粗+描边，方便按编号顺序逐行核对 */
-  .code{color:#0b2a4a;background:#eef2f7;border:1px solid #dbe2ea;border-radius:4px;padding:0 5px;font-weight:700;letter-spacing:.3px;}
-  .plays{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;justify-content:center;}
-  .pl{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;}
-  .pl .tg{font-style:normal;color:#64748b;background:#eef1f6;border:1px solid #e2e8f0;border-radius:5px;padding:0 6px;font-size:11px;line-height:1.8;}
-  .pl b{color:#0b2a4a;font-weight:700;font-size:12.5px;}
-  .actplays{display:inline-block;font-size:12px;line-height:1.8;text-align:left;}
-  .actplays b{color:#0b2a4a;font-weight:700;}
-  .parlay-tag{display:inline-block;font-size:10px;font-weight:600;color:#64748b;background:#f1f5f9;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:middle;}
-  .probs{display:flex;flex-wrap:wrap;gap:3px 8px;justify-content:center;font-size:11px;color:#475569;line-height:1.7;}
-  .probs span{white-space:nowrap;} .probs b{color:#0b2a4a;}
-  td.udcell .conf{font-weight:700;color:#0b2a4a;display:block;margin-bottom:3px;}
-  .h2h{font-size:11px;color:#6b21a8;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:4px;
-        padding:1px 6px;margin-top:3px;display:inline-block;cursor:help;}
-  @media(max-width:720px){
-    th.prob,td.prob{display:none;}
-    th.vnote,td.vnote{display:none;}
-    td.udcell .ud{display:none;}
-    td.udcell{white-space:nowrap;}
-    .plays{flex-wrap:wrap;justify-content:flex-start;gap:4px;line-height:1.8;}
-    .pl{padding:1px 4px;border:1px solid #e2e8f0;border-radius:5px;background:#f8fafd;}
-    .pl .tg{font-size:10.5px;padding:0 5px;line-height:1.6;}
-    .pl b{font-size:11.5px;}
-    .probs{flex-wrap:wrap;justify-content:flex-start;gap:3px;line-height:1.7;}
-  }
-  
-@media(max-width:720px){
-  table.resp{width:100%;box-sizing:border-box;}
-  table.resp tbody,table.resp tr{display:block;width:100%;box-sizing:border-box;}
-  table.resp td{box-sizing:border-box;}
-  table.resp thead{display:none;}
-  table.resp{margin:6px 0 14px;border-collapse:separate;}
-  table.resp tbody tr{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0 0 9px;border:1px solid #e5eaf1;border-radius:12px;padding:8px 10px;box-shadow:0 1px 5px rgba(15,23,42,.05);}
-  table.resp td{display:inline-flex;align-items:baseline;gap:3px;padding:2px 0;text-align:left;white-space:normal;min-width:0;flex:0 0 auto;width:auto;max-width:fit-content;}
-  table.resp td::before{content:attr(data-label);font-size:10.5px;font-weight:600;color:#94a3b8;margin-right:2px;white-space:nowrap;}
-  table.resp tr:hover td{background:transparent;}
-  /* 分组/合计行整宽标题条 */
-  table.resp td[colspan]{flex:1 1 100%;display:block;background:#e8f1fb;color:#0b2a4a;font-weight:700;text-align:left;border-radius:8px;margin:2px 0;padding:7px 10px;border-bottom:none;}
-  table.resp td[colspan]::before{content:"";}
-  /* 长内容字段整行 */
-  table.resp td[data-label*="对阵"],table.resp td[data-label*="选择"],table.resp td[data-label*="玩法"],table.resp td[data-label*="概率拆解"],table.resp td[data-label*="价值注记"]{flex:1 1 100%;display:block;border-top:1px dashed #eef1f6;margin-top:3px;padding-top:4px;}
-  table.resp td[data-label*="对阵"]::before,table.resp td[data-label*="选择"]::before,table.resp td[data-label*="玩法"]::before,table.resp td[data-label*="概率拆解"]::before,table.resp td[data-label*="价值注记"]::before{display:inline-block;margin-right:6px;}
-  /* 短数值字段：胶囊横排 */
-  table.resp td[data-label="类型"],table.resp td[data-label="组合赔率"],table.resp td[data-label="评分"],table.resp td[data-label="结果"],table.resp td[data-label="投入"],table.resp td[data-label="奖金"],table.resp td[data-label="理论奖金"],table.resp td[data-label="中奖概率"],table.resp td[data-label="实际比分"],table.resp td[data-label="命中"],table.resp td[data-label="投注/类型"],table.resp td[data-label="信心 / 爆冷（5维）"]{background:#f3f7fc;border-radius:6px;padding:1px 7px;font-size:12px;}
-  table.resp td.udcell{white-space:normal;}
-}
-
-</style>
-</head>
-<body>
-<style>
-/* —— 通用手机阅读规则（2026-10-11 用户要求：所有页面都适合手机阅读）—— */
-@media(max-width:720px){
-  body{font-size:13.5px;}
-  .container{padding:12px 10px 32px;}
-  .wrap{padding:12px 10px;}
-  .card{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  table{font-size:12px;}
-  th,td{padding:6px 5px;white-space:normal;}
-  img{max-width:100%;height:auto;}
-  pre{white-space:pre-wrap;word-break:break-all;}
-}
-</style><div class="nav"><div class="nav-inner"><span class="brand">🎱 彩票预测门户</span><a href="daily_today.html">今日预测</a><a href="index.html">竞猜</a><a href="ma.html">逐场分析</a><a href="sfc.html">传统足彩</a><a href="sfc_daily.html">足彩日报</a><a href="daily.html">日报</a><a href="weekly.html">周报</a><a href="jc_weekly.html">竞猜周报</a><a href="jc_daily.html" class="active">竞猜日报</a><a href="jc_accuracy.html">准确率</a><select onchange="location.href=this.value" style="margin-left:8px;padding:6px 10px;border-radius:6px;border:1px solid #cbd5e1;font-size:13px;background:#fff;color:#0b2a4a;max-width:200px;"><option value="jc_daily_2026-10-20.html">2026-10-20</option><option value="jc_daily_2026-10-19.html">2026-10-19</option><option value="jc_daily_2026-10-18.html">2026-10-18</option><option value="jc_daily_2026-10-17.html">2026-10-17</option><option value="jc_daily_2026-10-16.html">2026-10-16</option><option value="jc_daily_2026-10-15.html">2026-10-15</option><option value="jc_daily_2026-10-14.html">2026-10-14</option><option value="jc_daily_2026-10-13.html">2026-10-13</option><option value="jc_daily_2026-10-12.html">2026-10-12</option><option value="jc_daily_2026-10-11.html">2026-10-11</option><option value="jc_daily_2026-10-10.html">2026-10-10</option><option value="jc_daily_2026-10-09.html">2026-10-09</option><option value="jc_daily_2026-10-08.html">2026-10-08</option><option value="jc_daily_2026-10-07.html">2026-10-07</option><option value="jc_daily_2026-10-06.html">2026-10-06</option><option value="jc_daily_2026-10-01.html">2026-10-01</option><option value="jc_daily_2026-09-30.html">2026-09-30</option><option value="jc_daily_2026-09-29.html">2026-09-29</option><option value="jc_daily_2026-09-28.html">2026-09-28</option><option value="jc_daily_2026-09-27.html">2026-09-27</option><option value="jc_daily_2026-09-26.html">2026-09-26</option><option value="jc_daily_2026-09-25.html">2026-09-25</option><option value="jc_daily_2026-09-24.html">2026-09-24</option><option value="jc_daily_2026-09-23.html">2026-09-23</option><option value="jc_daily_2026-09-22.html">2026-09-22</option><option value="jc_daily_2026-09-21.html">2026-09-21</option><option value="jc_daily_2026-09-20.html">2026-09-20</option><option value="jc_daily_2026-09-19.html">2026-09-19</option><option value="jc_daily_2026-09-18.html">2026-09-18</option><option value="jc_daily_2026-09-17.html">2026-09-17</option><option value="jc_daily_2026-09-16.html">2026-09-16</option><option value="jc_daily_2026-09-15.html">2026-09-15</option><option value="jc_daily_2026-09-14.html">2026-09-14</option><option value="jc_daily_2026-09-13.html">2026-09-13</option><option value="jc_daily_2026-09-12.html">2026-09-12</option><option value="jc_daily_2026-09-11.html">2026-09-11</option><option value="jc_daily_2026-09-10.html">2026-09-10</option><option value="jc_daily_2026-09-09.html">2026-09-09</option><option value="jc_daily_2026-09-08.html">2026-09-08</option><option value="jc_daily_2026-09-07.html">2026-09-07</option><option value="jc_daily_2026-09-06.html">2026-09-06</option><option value="jc_daily_2026-09-05.html">2026-09-05</option><option value="jc_daily_2026-09-04.html">2026-09-04</option><option value="jc_daily_2026-09-03.html">2026-09-03</option><option value="jc_daily_2026-09-02.html">2026-09-02</option><option value="jc_daily_2026-09-01.html">2026-09-01</option><option value="jc_daily_2026-08-31.html" selected>2026-08-31</option><option value="jc_daily_2026-08-30.html">2026-08-30</option><option value="jc_daily_2026-08-29.html">2026-08-29</option><option value="jc_daily_2026-08-28.html">2026-08-28</option><option value="jc_daily_2026-08-27.html">2026-08-27</option><option value="jc_daily_2026-08-26.html">2026-08-26</option><option value="jc_daily_2026-08-25.html">2026-08-25</option><option value="jc_daily_2026-08-24.html">2026-08-24</option><option value="jc_daily_2026-08-23.html">2026-08-23</option><option value="jc_daily_2026-08-22.html">2026-08-22</option><option value="jc_daily_2026-08-21.html">2026-08-21</option><option value="jc_daily_2026-08-20.html">2026-08-20</option><option value="jc_daily_2026-08-19.html">2026-08-19</option><option value="jc_daily_2026-08-18.html">2026-08-18</option><option value="jc_daily_2026-08-17.html">2026-08-17</option><option value="jc_daily_2026-08-16.html">2026-08-16</option><option value="jc_daily_2026-08-15.html">2026-08-15</option><option value="jc_daily_2026-08-14.html">2026-08-14</option><option value="jc_daily_2026-08-13.html">2026-08-13</option><option value="jc_daily_2026-08-12.html">2026-08-12</option><option value="jc_daily_2026-08-11.html">2026-08-11</option><option value="jc_daily_2026-08-10.html">2026-08-10</option><option value="jc_daily_2026-08-09.html">2026-08-09</option><option value="jc_daily_2026-08-08.html">2026-08-08</option><option value="jc_daily_2026-08-07.html">2026-08-07</option><option value="jc_daily_2026-08-06.html">2026-08-06</option></select></div></div>
-<div class="container">
+body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);padding:14px 20px}
+h1{margin:0 0 6px;font-size:20px}
+.sub{color:var(--dim);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+nav a{padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;
+color:var(--ink);text-decoration:none;font-size:13px}
+nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1080px;margin:0 auto;padding:18px 16px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+padding:16px 18px;margin-bottom:14px}
+.card h2{margin:0 0 12px;font-size:16px}
+.card h3{margin:16px 0 8px;font-size:14.5px;color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:600;background:#fafbfd}
+.kpi{display:flex;flex-wrap:wrap;gap:10px}
+.kpi div{flex:1 1 150px;background:#fafbfd;border:1px solid var(--line);
+border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:19px}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;
+border:1px solid var(--line);background:#fafbfd;margin-right:4px}
+.tag.bad{border-color:#ef9a9a;background:#ffebee;color:var(--bad)}
+.tag.warn{border-color:#ffcc80;background:#fff3e0;color:var(--warn)}
+.tag.ok{border-color:#a5d6a7;background:#e8f5e9;color:var(--ok)}
+.m{color:var(--dim);font-size:12.5px}
+details{margin-top:6px}
+summary{cursor:pointer;color:var(--accent);font-size:12.5px}
+footer{color:var(--dim);font-size:12px;text-align:center;padding:20px}
+</style></head><body>
+<header><h1>📊 逐场分析日报（2026-08-31）</h1>
+<div class="sub">共 10 场｜已结算 10 场｜维度结论来自逐场分析的展示层单一来源
+（不含竞猜推荐与投注方案）</div>
+<nav><a href="ma.html">逐场分析</a><a href="jc_daily.html" class="active">分析日报</a><a href="daily_today.html">今日预测</a><a href="sfc.html">传统足彩</a><a href="sfc_daily.html">足彩日报</a><a href="daily.html">日报</a><a href="weekly.html">周报</a><select onchange="if(this.value)location.href=this.value" style="margin-left:6px;padding:4px 8px;border-radius:8px;border:1px solid #e4e7ee"><option value="jc_daily_2026-10-20.html">2026-10-20</option><option value="jc_daily_2026-10-19.html">2026-10-19</option><option value="jc_daily_2026-10-18.html">2026-10-18</option><option value="jc_daily_2026-10-17.html">2026-10-17</option><option value="jc_daily_2026-10-16.html">2026-10-16</option><option value="jc_daily_2026-10-15.html">2026-10-15</option><option value="jc_daily_2026-10-14.html">2026-10-14</option><option value="jc_daily_2026-10-13.html">2026-10-13</option><option value="jc_daily_2026-10-12.html">2026-10-12</option><option value="jc_daily_2026-10-11.html">2026-10-11</option><option value="jc_daily_2026-10-10.html">2026-10-10</option><option value="jc_daily_2026-10-09.html">2026-10-09</option><option value="jc_daily_2026-10-08.html">2026-10-08</option><option value="jc_daily_2026-10-07.html">2026-10-07</option><option value="jc_daily_2026-10-06.html">2026-10-06</option><option value="jc_daily_2026-09-30.html">2026-09-30</option><option value="jc_daily_2026-09-29.html">2026-09-29</option><option value="jc_daily_2026-09-28.html">2026-09-28</option><option value="jc_daily_2026-09-27.html">2026-09-27</option><option value="jc_daily_2026-09-26.html">2026-09-26</option><option value="jc_daily_2026-09-25.html">2026-09-25</option><option value="jc_daily_2026-09-24.html">2026-09-24</option><option value="jc_daily_2026-09-23.html">2026-09-23</option><option value="jc_daily_2026-09-22.html">2026-09-22</option><option value="jc_daily_2026-09-21.html">2026-09-21</option><option value="jc_daily_2026-09-20.html">2026-09-20</option><option value="jc_daily_2026-09-19.html">2026-09-19</option><option value="jc_daily_2026-09-18.html">2026-09-18</option><option value="jc_daily_2026-09-17.html">2026-09-17</option><option value="jc_daily_2026-09-16.html">2026-09-16</option><option value="jc_daily_2026-09-15.html">2026-09-15</option><option value="jc_daily_2026-09-14.html">2026-09-14</option><option value="jc_daily_2026-09-13.html">2026-09-13</option><option value="jc_daily_2026-09-12.html">2026-09-12</option><option value="jc_daily_2026-09-11.html">2026-09-11</option><option value="jc_daily_2026-09-10.html">2026-09-10</option><option value="jc_daily_2026-09-09.html">2026-09-09</option><option value="jc_daily_2026-09-08.html">2026-09-08</option><option value="jc_daily_2026-09-07.html">2026-09-07</option><option value="jc_daily_2026-09-06.html">2026-09-06</option><option value="jc_daily_2026-09-05.html">2026-09-05</option><option value="jc_daily_2026-09-04.html">2026-09-04</option><option value="jc_daily_2026-09-03.html">2026-09-03</option><option value="jc_daily_2026-09-02.html">2026-09-02</option><option value="jc_daily_2026-09-01.html">2026-09-01</option><option value="jc_daily_2026-08-31.html" selected>2026-08-31</option><option value="jc_daily_2026-08-30.html">2026-08-30</option><option value="jc_daily_2026-08-29.html">2026-08-29</option><option value="jc_daily_2026-08-28.html">2026-08-28</option><option value="jc_daily_2026-08-27.html">2026-08-27</option><option value="jc_daily_2026-08-26.html">2026-08-26</option><option value="jc_daily_2026-08-25.html">2026-08-25</option><option value="jc_daily_2026-08-24.html">2026-08-24</option><option value="jc_daily_2026-08-23.html">2026-08-23</option><option value="jc_daily_2026-08-22.html">2026-08-22</option><option value="jc_daily_2026-08-21.html">2026-08-21</option><option value="jc_daily_2026-08-20.html">2026-08-20</option><option value="jc_daily_2026-08-19.html">2026-08-19</option><option value="jc_daily_2026-08-18.html">2026-08-18</option><option value="jc_daily_2026-08-17.html">2026-08-17</option><option value="jc_daily_2026-08-16.html">2026-08-16</option><option value="jc_daily_2026-08-15.html">2026-08-15</option><option value="jc_daily_2026-08-14.html">2026-08-14</option><option value="jc_daily_2026-08-13.html">2026-08-13</option><option value="jc_daily_2026-08-12.html">2026-08-12</option><option value="jc_daily_2026-08-08.html">2026-08-08</option></select></nav></header>
+<main>
+<div class="card"><h2>📈 当日概览</h2>
+<div class="kpi"><div>方向<b class="ok">60.0%</b><span class="m">6/10</span></div><div>让球<b class="ok">60.0%</b><span class="m">6/10</span></div><div>总进球<b class="ok">60.0%</b><span class="m">6/10</span></div></div>
+<h3>警示与特征分布</h3>
+<table><tr><th>类型</th><th>场次</th><th>占比</th></tr><tr><td>高危(与市场相反)</td><td><b>0</b> 场</td><td class="m">0%</td></tr><tr><td>交锋劣势警示</td><td><b>0</b> 场</td><td class="m">0%</td></tr><tr><td>盘口结构警示</td><td><b>3</b> 场</td><td class="m">30%</td></tr><tr><td>模型偏离市场</td><td><b>0</b> 场</td><td class="m">0%</td></tr><tr><td>偏平(中/强)</td><td><b>4</b> 场</td><td class="m">40%</td></tr></table>
+<p class="m" style="margin-top:10px">「高危（与市场相反）」＝模型方向与市场隐含方向不一致。
+全库 158 场该情形模型错 69.0%（一致时仅 39.6%），是目前唯一稳定的赛前高危判据。</p>
+</div>
+<h2 style="max-width:1080px;margin:18px auto 10px;font-size:17px">🔍 逐场分析（10 场）</h2>
 <div class="card">
-  <h2>⚽ 竞猜日报（2026-08-31）</h2>
-  <p class="sub">规则：每日限额 ¥100 · 全部投入<b>串关</b>（最低 2串1、可跨天）· 单场只<b>预测算准确率</b>不买入 · 每场多角度分析+冷门5维+价值注记。状态：已开赛·统计 ｜ 引擎 sports_engine v1.13.0 ｜ 让球/让分准确率为独立单场口径（不计入主准确率，历史让球线曾符号反向需谨慎）</p>
-  <div class="kpis">
-    <div class="kpi"><div>配对场次</div><b>16</b><small>命中 11 场</small></div>
-    <div class="kpi"><div>⚽ 足球准确率</div><b>60.0%</b><small>命中 6/10 场（胜平负）</small></div>
-    <div class="kpi"><div>⚽ 让球准确率</div><b>60.0%</b><small>命中 6/10 场（单场让球方向）</small></div>
-    <div class="kpi"><div>🏀 篮球准确率</div><b>83.3%</b><small>命中 5/6 场（胜负）</small></div>
-    <div class="kpi"><div>🏀 让分准确率</div><b>66.7%</b><small>命中 4/6 场（单场让分方向）</small></div>
-    <div class="kpi"><div>总投入</div><b>¥100</b><small>含串关</small></div>
-    <div class="kpi green"><div>中奖 / 净利</div><b>¥193 / ¥93</b><small>串关 2/2</small></div>
-  </div>
-</div>
-
-<div class="card">
-  <h2>🔗 串关结算</h2>
-  <div class="wrap"><table class="resp"><thead>
-    <tr><th>类型</th><th>选择</th><th>组合赔率</th><th>评分</th><th>结果</th><th>投入</th><th>奖金</th></tr>
-  </thead><tbody>
-    <tr><td><b>2串1</b></td><td class="l">胜平负·负 @1.23 + 胜平负·负 @1.4<br><small>周日|018 坎布尔vs特温特 <span class="lgdate">(08-31)</span> + 周一|009 阿斯顿维拉vs阿森纳 <span class="lgdate">(09-01)</span></small><br><small>逐场：中 + 中</small></td><td>1.72</td><td>36 <small>★★★☆☆<br>中36%</small></td><td style="color:#059669;font-weight:700">🎉 全中</td><td>¥55</td><td>¥94.6</td></tr><tr><td><b>3串1</b></td><td class="l">胜平负·负 @1.23 + 胜平负·负 @1.27 + 胜平负·负 @1.4<br><small>周日|018 坎布尔vs特温特 <span class="lgdate">(08-31)</span> + 周日|020 卡利亚里vs国际米兰 <span class="lgdate">(08-31)</span> + 周一|009 阿斯顿维拉vs阿森纳 <span class="lgdate">(09-01)</span></small><br><small>逐场：中 + 中 + 中</small></td><td>2.19</td><td>21 <small>★★☆☆☆<br>中21%</small></td><td style="color:#059669;font-weight:700">🎉 全中</td><td>¥45</td><td>¥98.5</td></tr>
-  </tbody></table></div>
-</div>
-
-<div style="margin:12px 0;padding:10px 12px;border:1px solid #E4E3DD;border-radius:10px;background:#FBF9F4;font-size:12.5px;color:#555;">今日无跨天串关（符合"宁可空仓不瞎下"原则）：明/后两天合格腿不足——低预测性联赛（英冠/芬超/巴甲/美职/韩职/瑞超/德乙/荷乙）已按回测规则排除串关，或剩余腿信心/风险不达标。单关仍全部预测，不受影响。</div>
-
-<div class="card">
-  <h2>🔁 赛后复盘（失误归因 · 下次怎么避免）</h2>
-  <p class="sub">近 14 天已结算 248 场（足球 190 场）｜
-    失误 181 场｜爆冷平 38 场（占足球 20.0%）｜
-    双选：应触发 93、覆盖失败 18、白开 50（复盘数据截至 2026-10-18）</p>
-  <div class="wrap"><table class="resp"><thead>
-    <tr><th>失误归因 TOP5</th><th>场次</th><th>下次规避动作</th></tr>
-  </thead><tbody><tr><td class="l">关键伤停</td><td>102</td><td class="l small">关键伤停改变真实实力，双选或观望</td></tr><tr><td class="l">低期望进球（≤2.7 球）</td><td>77</td><td class="l small">低进球场天然偏向小比分平局，平局评估升一档看待</td></tr><tr><td class="l">平赔落在甜区 3.00~3.60</td><td>71</td><td class="l small">甜区平局率 28.8%~35.6%，双选补平的优先候选</td></tr><tr><td class="l">高概率场失误（非系统性过度自信）</td><td>57</td><td class="l small">高概率≠高枕无忧；p_pick≥0.60 场单独统计命中，不加大投入</td></tr><tr><td class="l">让球方中/重状态隐患</td><td>53</td><td class="l small">开双选（让球方方向+让平）；仍错则同类场降观望</td></tr></tbody></table></div>
-  <p class="sub">前瞻警示当前生效信号（爆冷平组合·回测判定达标/有效）：draw_sweet+low_tg、draw_sweet+risk_mid、draw_sweet+walk_signal、low_tg+risk_mid｜
-    完整复盘报告：reports/postmatch_review_2026-10-18.md ｜ 信号回测：reports/postmatch_backtest_2026-10-18.txt</p>
-</div>
-
-<div class="card">
-  <h2>🧭 三路方向性计分 · 预测准确率（本日 2026-08-31）</h2>
-  <p class="sub">本日报日期场次的核对：三路方向性计分结论（单选/双选）于预测当日落盘，赛果出来后逐场核对；
-    合并命中＝单选方向命中＋双选前2覆盖（固定分母，不可算按未命中）。本日已结算 <b>10</b> 场。</p>
-  <div class="kpis"><div class="kpi"><div>胜平负三路 · 合并命中</div><b>60.0%</b><small>6/10 场（固定分母）</small></div><div class="kpi"><div>单选命中 ｜ 双选覆盖</div><b>3/3 ｜ 3/7</b><small>胜平负三路（主胜／平局／客胜）</small></div><div class="kpi"><div>让球三路 · 合并命中</div><b>50.0%</b><small>5/10 场（让球结果可算）</small></div><div class="kpi"><div>单选命中 ｜ 双选覆盖</div><b>3/6 ｜ 2/3</b><small>让球三路（让胜／让平／让负）</small></div></div>
-</div>
-<div class="card">
-  <h2>📋 逐场明细（预测 vs 赛果 · 含未预测场次）</h2>
-  <div class="wrap"><table class="resp"><thead>
-    <tr><th>对阵（比赛时间）</th><th>玩法预测</th><th>实际比分</th><th>命中</th>
-        <th class="prob">概率拆解（市场/自研/H2H）</th><th class="udcell">信心 / 爆冷（5维）</th><th class="vnote">价值注记</th><th>投注/类型</th><th>奖金</th></tr>
-  </thead><tbody>
-    <tr><td class="l"><b>那不勒斯</b> <span class="vs">vs</span> <b>科莫</b><br><small>[<b class="code">周日016</b>] 意甲   2026-08-31 00:30</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fff8e1;color:#b8860b;border:1px solid #ffd54f" title="融合平局概率 31% ≥ 阈值 30%，平局风险偏高；仅提示，主推方向不变">31%平局候选</span><span class="pl" title="让球三路计分判单选「让负」（61%，领先次选 38.3 个百分点）：让球单选方向命中 55.7%（271 场回测）"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span><span class="pl" title="1:1@16% / 0:1@13%"><em class="tg">比分Top3</em><b>1:1 0:1 1:0</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>1:2</b> 胜平负·负 让球-1·让负 总进球·3 半全场·负/负</span></td><td><span class="bad">❌</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>39%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>41%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>40%</b></span></div><div class="h2h" title="2026-05-02 Como 0:0 Napoli；2026-02-10 Napoli 1:1 Como；2025-11-01 Napoli 0:0 Como；2025-02-23 Como 2:1 Napoli；2024-10-04 Napoli 3:1 Como">H2H 5场 <b>1胜3平1负</b></div></td><td class="small udcell"><b class="conf">0.45</b><br>高(63%)<br><span class="ud" title="主推胜概率40%，其余合计60%">实力差距60</span><span class="ud" title="主推40% vs 次选31%，差距9个百分点（接近、难预测）">状态波动82</span><span class="ud" title="意甲 系数 0.61">联赛冷门系数61</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>拉科鲁尼亚</b> <span class="vs">vs</span> <b>巴伦西亚</b><br><small>[<b class="code">周日017</b>] 西甲   2026-08-31 01:30</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fff8e1;color:#b8860b;border:1px solid #ffd54f" title="融合平局概率 30% ≥ 阈值 30%，平局风险偏高；仅提示，主推方向不变">30%平局候选</span><span class="pl" title="让球三路计分判单选「让负」（63%，领先次选 40.2 个百分点）：让球单选方向命中 55.7%（271 场回测）"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span><span class="pl" title="1:1@13% / 1:0@10%"><em class="tg">比分Top3</em><b>1:1 1:0 0:1</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>3:1</b> 胜平负·胜 让球-1·让胜 总进球·4 半全场·胜/胜</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>36%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>42%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>38%</b></span></div><div class="h2h" title="2018-05-20 Valencia 2:1 Deportivo A Coruña；2018-01-13 Deportivo A Coruña 1:2 Valencia；2017-04-02 Valencia 3:0 Deportivo A Coruña；2016-10-31 Deportivo A Coruña 1:1 Valencia；2016-01-24 Deportivo A Coruña 1:1 Valencia">H2H 12场 <b>1胜4平7负</b></div></td><td class="small udcell"><b class="conf">0.45</b><br>高(63%)<br><span class="ud" title="主推胜概率38%，其余合计62%">实力差距62</span><span class="ud" title="主推38% vs 次选32%，差距6个百分点（接近、难预测）">状态波动85</span><span class="ud" title="西甲 系数 0.51">联赛冷门系数51</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>坎布尔</b> <span class="vs">vs</span> <b>特温特</b><span style="display:inline-block;"><span class="parlay-tag" title="串关腿">2串1·胜平负负</span><span class="parlay-tag" title="串关腿">3串1·胜平负负</span></span><br><small>[<b class="code">周日018</b>] 荷甲   2026-08-31 02:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">负</b></span><span class="pl" title="让球三路计分判双选（让胜/让平/让负接近或爆冷指数高，主推 46%）：让球双选前2覆盖 76.7%（395 场回测，705 场固定分母合并 64.4%）。让球玩法买这两个方向"><em class="tg">让球 1</em><b style="font-weight:700;color:#C0392B;font-size:13px">双选 让负＋让胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fdecea;color:#C0392B;border:1px solid #e6a23c" title="让球三路计分判双选，前2覆盖76.7%（395场回测）">让球双选</span><span class="pl" title="1:3@10% / 0:2@9%"><em class="tg">比分Top3</em><b>1:3 0:2 1:2</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>负负</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="信心不足(观望)">观望</span></div></td><td><span class="actplays"><b>1:4</b> 胜平负·负 让球1·让负 总进球·5 半全场·负/负</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>71%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>50%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>65%</b></span><br><span style="color:#c62828;font-weight:700">⚠ 分歧21pp</span></div><div class="h2h" title="2023-04-09 FC Twente 4:0 Cambuur；2022-10-23 Cambuur 0:1 FC Twente；2022-03-06 FC Twente 1:0 Cambuur；2021-08-28 Cambuur 2:0 FC Twente；2019-05-03 FC Twente 2:2 Cambuur">H2H 13场 <b>1胜3平9负</b></div></td><td class="small udcell"><b class="conf">0.58</b><br>中(45%)<br><span class="ud" title="主推负概率65%，其余合计35%">实力差距35</span><span class="ud" title="主推65% vs 次选20%，差距45个百分点">状态波动50</span><span class="ud" title="荷甲 系数 0.80（杯赛/次级联赛偏冷）">联赛冷门系数80</span></td><td class="small l vnote" style="max-width:200px;">价值充足（模型概率≥60%，模拟赔率隐含概率≤模型概率，可投）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>拉齐奥</b> <span class="vs">vs</span> <b>热那亚</b><br><small>[<b class="code">周日019</b>] 意甲   2026-08-31 02:45</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl" title="让球三路计分判双选（让胜/让平/让负接近或爆冷指数高，主推 48%）：让球双选前2覆盖 76.7%（395 场回测，705 场固定分母合并 64.4%）。让球玩法买这两个方向"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">双选 让负＋让平</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fdecea;color:#C0392B;border:1px solid #e6a23c" title="让球三路计分判双选，前2覆盖76.7%（395场回测）">让球双选</span><span class="pl" title="1:0@13% / 1:1@12%"><em class="tg">比分Top3</em><b>1:0 1:1 2:0</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="信心不足(观望)">观望</span></div></td><td><span class="actplays"><b>1:0</b> 胜平负·胜 让球-1·让平 总进球·1 半全场·胜/胜</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>47%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>45%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>46%</b></span></div><div class="h2h" title="2026-01-30 Lazio 3:2 Genoa；2025-09-29 Genoa 0:3 Lazio；2025-04-23 Genoa 0:2 Lazio；2024-10-27 Lazio 3:0 Genoa；2024-04-19 Genoa 0:1 Lazio">H2H 33场 <b>17胜4平12负</b></div></td><td class="small udcell"><b class="conf">0.46</b><br>中(57%)<br><span class="ud" title="主推胜概率46%，其余合计54%">实力差距54</span><span class="ud" title="主推46% vs 次选30%，差距17个百分点（接近、难预测）">状态波动75</span><span class="ud" title="意甲 系数 0.61">联赛冷门系数61</span></td><td class="small l vnote" style="max-width:200px;">价值一般（模型概率45-60%，仅当组合需要时纳入）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>卡利亚里</b> <span class="vs">vs</span> <b>国际米兰</b><span style="display:inline-block;"><span class="parlay-tag" title="串关腿">3串1·胜平负负</span></span><br><small>[<b class="code">周日020</b>] 意甲   2026-08-31 02:45</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">负</b></span><span class="pl" title="让球三路计分判双选（让胜/让平/让负接近或爆冷指数高，主推 42%）：让球双选前2覆盖 76.7%（395 场回测，705 场固定分母合并 64.4%）。让球玩法买这两个方向"><em class="tg">让球 1</em><b style="font-weight:700;color:#C0392B;font-size:13px">双选 让负＋让胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fdecea;color:#C0392B;border:1px solid #e6a23c" title="让球三路计分判双选，前2覆盖76.7%（395场回测）">让球双选</span><span class="pl" title="0:1@17% / 0:2@14%"><em class="tg">比分Top3</em><b>0:1 0:2 1:2</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>负负</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="信心不足(观望)">观望</span></div></td><td><span class="actplays"><b>0:1</b> 胜平负·负 让球1·让平 总进球·1 半全场·负/负</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>69%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>33%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>58%</b></span><br><span style="color:#c62828;font-weight:700">⚠ 分歧36pp</span></div><div class="h2h" title="2026-04-17 Inter 3:0 Cagliari；2025-09-27 Cagliari 0:2 Inter；2025-04-12 Inter 3:1 Cagliari；2024-12-28 Cagliari 0:3 Inter；2024-04-14 Inter 2:2 Cagliari">H2H 30场 <b>4胜6平20负</b></div></td><td class="small udcell"><b class="conf">0.58</b><br>中(48%)<br><span class="ud" title="主推负概率58%，其余合计42%">实力差距42</span><span class="ud" title="主推58% vs 次选23%，差距35个百分点">状态波动59</span><span class="ud" title="意甲 系数 0.61">联赛冷门系数61</span></td><td class="small l vnote" style="max-width:200px;">价值一般（模型概率45-60%，仅当组合需要时纳入）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>摩纳哥</b> <span class="vs">vs</span> <b>马赛</b><br><small>[<b class="code">周日021</b>] 法甲  <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #F59E0B;border-radius:8px;color:#B45309;font-size:10.5px;background:#FEF3C7;white-space:nowrap;" title="爆冷平风险信号×3：平赔落在甜区 3.00~3.60+让球方中/重状态隐患、低期望进球（≤2.7 球）+让球方中/重状态隐患、平赔落在甜区 3.00~3.60+低期望进球（≤2.7 球）（同信号组冷平率高于池基线，回测见 reports/postmatch_backtest）">⚠复盘警示·爆冷平＋双选</span> 2026-08-31 02:45</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl" title="让球三路计分判单选「让负」（59%，领先次选 36.8 个百分点）：让球单选方向命中 55.7%（271 场回测）"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span><span class="pl" title="1:1@12% / 0:0@10%"><em class="tg">比分Top3</em><b>1:1 0:0 0:1</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>平胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>2:0</b> 胜平负·胜 让球-1·让胜 总进球·2 半全场·胜/胜</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>41%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>37%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>40%</b></span></div><div class="h2h" title="2026-04-05 Monaco 2:1 Marseille；2025-12-14 Marseille 1:0 Monaco；2025-04-12 Monaco 3:0 Marseille；2024-12-01 Marseille 2:1 Monaco；2024-01-27 Marseille 2:2 Monaco">H2H 31场 <b>15胜7平9负</b></div></td><td class="small udcell"><b class="conf">0.45</b><br>高(63%)<br><span class="ud" title="主推胜概率40%，其余合计60%">实力差距60</span><span class="ud" title="主推40% vs 次选33%，差距7个百分点（接近、难预测）">状态波动84</span><span class="ud" title="法甲 系数 0.64">联赛冷门系数64</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>弗拉门戈</b> <span class="vs">vs</span> <b>博塔弗戈</b><br><small>[<b class="code">周日022</b>] 巴甲 <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #EA6668;border-radius:8px;color:#C0392B;font-size:10.5px;background:#FDF0F0;white-space:nowrap;" title="低预测性联赛：市场难定价，参考价值低">低预测性联赛</span>  2026-08-31 03:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><b style="font-weight:700;color:#C0392B;font-size:13px">胜</b></span><span class="pl" title="让球三路计分判双选（让胜/让平/让负接近或爆冷指数高，主推 41%）：让球双选前2覆盖 76.7%（395 场回测，705 场固定分母合并 64.4%）。让球玩法买这两个方向"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">双选 让胜＋让负</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fdecea;color:#C0392B;border:1px solid #e6a23c" title="让球三路计分判双选，前2覆盖76.7%（395场回测）">让球双选</span><span class="pl" title="1:0@12% / 2:0@12%"><em class="tg">比分Top3</em><b>1:0 2:0 3:0</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="信心不足(观望)">观望</span></div></td><td><span class="actplays"><b>3:0</b> 胜平负·胜 让球-1·让胜 总进球·3 半全场·胜/胜</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>69%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>45%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>62%</b></span><br><span style="color:#c62828;font-weight:700">⚠ 分歧25pp</span></div><div class="h2h" title="2026-03-14 Botafogo 0:3 Flamengo；2026-02-15 Botafogo 1:2 Flamengo；2025-10-15 Botafogo 0:3 Flamengo；2025-05-18 Flamengo 0:0 Botafogo；2025-02-13 Flamengo 1:0 Botafogo">H2H 40场 <b>19胜13平8负</b></div></td><td class="small udcell"><b class="conf">0.59</b><br>中(46%)<br><span class="ud" title="主推胜概率62%，其余合计38%">实力差距38</span><span class="ud" title="主推62% vs 次选22%，差距40个百分点">状态波动54</span><span class="ud" title="巴甲 系数 0.79（杯赛/次级联赛偏冷）">联赛冷门系数79</span></td><td class="small l vnote" style="max-width:200px;">价值一般（模型概率45-60%，仅当组合需要时纳入）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>维戈塞尔塔</b> <span class="vs">vs</span> <b>毕尔巴鄂竞技</b><br><small>[<b class="code">周日023</b>] 西甲  <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #F59E0B;border-radius:8px;color:#B45309;font-size:10.5px;background:#FEF3C7;white-space:nowrap;" title="爆冷平风险信号×1：平赔落在甜区 3.00~3.60+让球方中/重状态隐患（同信号组冷平率高于池基线，回测见 reports/postmatch_backtest）">⚠复盘警示·爆冷平＋双选</span> 2026-08-31 03:30</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl" title="让球三路计分判单选「让负」（60%，领先次选 36.8 个百分点）：让球单选方向命中 55.7%（271 场回测）"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span><span class="pl" title="1:1@12% / 2:1@10%"><em class="tg">比分Top3</em><b>1:1 2:1 0:1</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>平胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>0:2</b> 胜平负·负 让球-1·让负 总进球·2 半全场·负/负</span></td><td><span class="bad">❌</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>40%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>38%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>40%</b></span></div><div class="h2h" title="2026-05-17 Athletic Club 1:1 Celta Vigo；2025-12-14 Celta Vigo 2:0 Athletic Club；2025-01-19 Celta Vigo 1:2 Athletic Club；2024-09-22 Athletic Club 3:1 Celta Vigo；2024-05-15 Celta Vigo 2:1 Athletic Club">H2H 32场 <b>9胜7平16负</b></div></td><td class="small udcell"><b class="conf">0.45</b><br>高(61%)<br><span class="ud" title="主推胜概率40%，其余合计60%">实力差距60</span><span class="ud" title="主推40% vs 次选32%，差距8个百分点（接近、难预测）">状态波动83</span><span class="ud" title="西甲 系数 0.51">联赛冷门系数51</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>法马利康</b> <span class="vs">vs</span> <b>吉维森特</b><br><small>[<b class="code">周日024</b>] 葡超  <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #F59E0B;border-radius:8px;color:#B45309;font-size:10.5px;background:#FEF3C7;white-space:nowrap;" title="爆冷平风险信号×1：平赔落在甜区 3.00~3.60+低期望进球（≤2.7 球）（同信号组冷平率高于池基线，回测见 reports/postmatch_backtest）">⚠复盘警示·爆冷平＋双选</span> 2026-08-31 03:30</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl" title="让球三路计分判双选（让胜/让平/让负接近或爆冷指数高，主推 49%）：让球双选前2覆盖 76.7%（395 场回测，705 场固定分母合并 64.4%）。让球玩法买这两个方向"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">双选 让负＋让平</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#fdecea;color:#C0392B;border:1px solid #e6a23c" title="让球三路计分判双选，前2覆盖76.7%（395场回测）">让球双选</span><span class="pl" title="1:1@12% / 1:0@12%"><em class="tg">比分Top3</em><b>1:1 1:0 2:0</b></span><span class="pl"><em class="tg">总进球</em><b>2</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>0:0</b> 胜平负·平 让球-1·让负 总进球·0 半全场·平/平</span></td><td><span class="bad">❌</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>46%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>26%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>40%</b></span><br><span style="color:#c62828;font-weight:700">⚠ 分歧20pp</span></div><div class="h2h" title="2026-02-01 Gil Vicente 5:0 Famalicão；2025-08-24 Famalicão 0:0 Gil Vicente；2025-02-17 Gil Vicente 0:2 Famalicão；2024-09-14 Famalicão 1:1 Gil Vicente；2024-03-29 Gil Vicente 1:2 Famalicão">H2H 20场 <b>10胜6平4负</b></div></td><td class="small udcell"><b class="conf">0.43</b><br>高(64%)<br><span class="ud" title="主推胜概率40%，其余合计60%">实力差距60</span><span class="ud" title="主推40% vs 次选31%，差距8个百分点（接近、难预测）">状态波动82</span><span class="ud" title="葡超 系数 0.74">联赛冷门系数74</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>圣路易斯城</b> <span class="vs">vs</span> <b>达拉斯FC</b><br><small>[<b class="code">周日025</b>] 美职 <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #EA6668;border-radius:8px;color:#C0392B;font-size:10.5px;background:#FDF0F0;white-space:nowrap;" title="低预测性联赛：市场难定价，参考价值低">低预测性联赛</span> <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #F59E0B;border-radius:8px;color:#B45309;font-size:10.5px;background:#FEF3C7;white-space:nowrap;" title="爆冷平风险信号×1：平赔落在甜区 3.00~3.60+低期望进球（≤2.7 球）（同信号组冷平率高于池基线，回测见 reports/postmatch_backtest）">⚠复盘警示·爆冷平＋双选</span> 2026-08-31 07:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜平负</em><span style="color:#999;font-weight:400">胜</span></span><span class="pl" title="让球方向赔率 1.40~1.80 档回测 316 场：段内双选比单选每场多 2.4 个百分点；逐月同期对照三个月全部占优（8 月 +16.4、9 月 +10.5、10 月 +0.4 个百分点）。双选＝让负＋让平，让球方赢球即中。合成赔率 1.16；正双覆盖 76.1%；覆盖增益约 23.0 个百分点（让平隐含）。跟踪备注（2026-10-13 重做）：原「so≥1.8 才双选」门槛经 668 场引擎真实口径回测确认方向搞反，新门槛为 so≤1.80；深盘（|线|≥2）与甜蜜点规则因证据冲突或样本不足降级为备注；绝对收益随大盘漂移（训练 −1.5 / 时间外 +13.9 个百分点），仅跟踪、按月复检。展示层建议，不改变让球判定与投注方案"><em class="tg">让球 -1</em><b style="font-weight:700;color:#C0392B;font-size:13px">让负</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f0fe;color:#1967d2;border:1px solid #90caf9" title="让球方向赔率 1.40~1.80 档回测 316 场：段内双选比单选每场多 2.4 个百分点；逐月同期对照三个月全部占优（8 月 +16.4、9 月 +10.5、10 月 +0.4 个百分点）。双选＝让负＋让平，让球方赢球即中。合成赔率 1.16；正双覆盖 76.1%；覆盖增益约 23.0 个百分点（让平隐含）。跟踪备注（2026-10-13 重做）：原「so≥1.8 才双选」门槛经 668 场引擎真实口径回测确认方向搞反，新门槛为 so≤1.80；深盘（|线|≥2）与甜蜜点规则因证据冲突或样本不足降级为备注；绝对收益随大盘漂移（训练 −1.5 / 时间外 +13.9 个百分点），仅跟踪、按月复检。展示层建议，不改变让球判定与投注方案">双选</span><span class="pl" title="1:0@15% / 0:0@14%"><em class="tg">比分Top3</em><b>1:0 0:0 0:1</b></span><span class="pl"><em class="tg">总进球</em><b>3</b></span><span class="pl"><em class="tg">半全场</em><b>胜胜</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="高风险且低信心(观望)">观望</span></div></td><td><span class="actplays"><b>3:3</b> 胜平负·平 让球-1·让负 总进球·6 半全场·胜/平</span></td><td><span class="bad">❌</span></td><td class="small prob"><div class="probs"><span title="市场赔率隐含（去边际）">市场 <b>46%</b></span><span title="自研 ELO + Dixon-Coles">自研 <b>35%</b></span><span title="融合输出 = 0.70×市场 + 0.30×自研">融合 <b>42%</b></span></div><div class="h2h" title="2026-04-12 FC Dallas 1:1 St. Louis City；2025-09-07 St. Louis City 1:1 FC Dallas；2025-07-20 FC Dallas 3:0 St. Louis City；2024-07-28 St. Louis City 2:1 FC Dallas；2024-06-16 FC Dallas 2:0 St. Louis City">H2H 8场 <b>2胜3平3负</b></div></td><td class="small udcell"><b class="conf">0.45</b><br>高(61%)<br><span class="ud" title="主推胜概率42%，其余合计58%">实力差距58</span><span class="ud" title="主推42% vs 次选30%，差距12个百分点（接近、难预测）">状态波动79</span><span class="ud" title="美职 系数 0.59">联赛冷门系数59</span></td><td class="small l vnote" style="max-width:200px;">价值不足（模型概率<45%，框架建议放弃该方向，避免水位/误差吞噬优势）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>爱沙尼亚</b> <span class="vs">vs</span> <b>芬兰</b><br><small>[<b class="code">周日306</b>] 世预男篮  <span style="display:inline-block;margin:0 2px;padding:0 5px;border:1px solid #F59E0B;border-radius:8px;color:#B45309;font-size:10.5px;background:#FEF3C7;white-space:nowrap;" title="">⚠无市场校准·概率存疑</span> 2026-08-31 00:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -7.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 168.5</em><b>大</b></span><span class="pl" title="主胜1-5 20% 主胜11-15 19% 主胜6-10 18% 主胜16-20 12% 客胜1-5 10% 客胜6-10 7%"><em class="tg">胜分差</em><b>主胜11-15</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7" title="高信心推荐">推荐</span></div></td><td><span class="actplays"><b>67:96</b> 胜负·客胜 让分-7.5·让负 大小分168.5·小</span></td><td><span class="bad">❌</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.66</b><br>低(33%)<br><span class="ud" title="主推胜概率78%，其余合计22%">实力差距22</span><span class="ud" title="主推78% vs 次选22%，差距56个百分点">状态波动40</span><span class="ud" title="世预男篮 系数 0.64">联赛冷门系数64</span></td><td class="small l vnote" style="max-width:200px;">价值充足（MC模拟主胜≥60%，可投）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>斯洛文尼亚</b> <span class="vs">vs</span> <b>匈牙利</b><br><small>[<b class="code">周日307</b>] 世预男篮   2026-08-31 02:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -4.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 164.5</em><b>大</b></span><span class="pl" title="主胜1-5 26% 客胜1-5 16% 客胜6-10 12% 主胜11-15 12% 主胜6-10 12% 主胜16-20 8%"><em class="tg">胜分差</em><b>主胜6-10</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7" title="高信心推荐">推荐</span></div></td><td><span class="actplays"><b>92:77</b> 胜负·主胜 让分-4.5·让胜 大小分164.5·大</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.63</b><br>中(47%)<br><span class="ud" title="主推胜概率63%，其余合计37%">实力差距37</span><span class="ud" title="主推63% vs 次选37%，差距25个百分点">状态波动67</span><span class="ud" title="世预男篮 系数 0.64">联赛冷门系数64</span></td><td class="small l vnote" style="max-width:200px;">价值充足（MC模拟主胜≥60%，可投）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>亚特兰大梦想</b> <span class="vs">vs</span> <b>明尼苏达天猫</b><br><small>[<b class="code">周日308</b>] 美职女篮   2026-08-31 03:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -1.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 179.5</em><b>小</b></span><span class="pl" title="主胜1-5 20% 客胜1-5 16% 主胜6-10 16% 客胜6-10 14% 客胜11-15 8% 主胜11-15 8%"><em class="tg">胜分差</em><b>主胜6-10</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#f5f5f5;color:#888;border:1px solid #ddd" title="信心不足(观望)">观望</span></div></td><td><span class="actplays"><b>89:81</b> 胜负·主胜 让分-1.5·让胜 大小分179.5·小</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.55</b><br>中(53%)<br><span class="ud" title="主推胜概率55%，其余合计45%">实力差距45</span><span class="ud" title="主推55% vs 次选46%，差距9个百分点（接近、难预测）">状态波动82</span><span class="ud" title="美职女篮 系数 0.53">联赛冷门系数53</span></td><td class="small l vnote" style="max-width:200px;">价值一般（MC模拟55-60%，谨慎纳入）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>风暴</b> <span class="vs">vs</span> <b>火花</b><br><small>[<b class="code">周日309</b>] 美职女篮 2026-08-31 05:00</small></td><td class="l small"><span class="empty">未预测</span></td><td class="l"><span class="actplays"><b>74:90</b> 胜平负·负 总进球·7+ 半全场·负(半场待补)</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td class="l"><b>波特兰火焰</b> <span class="vs">vs</span> <b>金州女武神</b><br><small>[<b class="code">周日310</b>] 美职女篮 2026-08-31 07:00</small></td><td class="l small"><span class="empty">未预测</span></td><td class="l"><span class="actplays"><b>69:86</b> 胜平负·负 总进球·7+ 半全场·负(半场待补)</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td class="l"><b>飞马</b> <span class="vs">vs</span> <b>太阳</b><br><small>[<b class="code">周日311</b>] 美职女篮 2026-08-31 08:30</small></td><td class="l small"><span class="empty">未预测</span></td><td class="l"><span class="actplays"><b>97:71</b> 胜平负·胜 总进球·7+ 半全场·胜(半场待补)</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td class="l"><b>韩国</b> <span class="vs">vs</span> <b>沙特阿拉伯</b><br><small>[<b class="code">周一301</b>] 世预男篮   2026-08-31 18:00</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -3.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 161.5</em><b>大</b></span><span class="pl" title="主胜1-5 23% 主胜6-10 17% 客胜1-5 14% 主胜11-15 13% 客胜6-10 12% 主胜16-20 8%"><em class="tg">胜分差</em><b>主胜6-10</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7" title="高信心推荐">推荐</span></div></td><td><span class="actplays"><b>85:72</b> 胜负·主胜 让分-3.5·让胜 大小分161.5·小</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.63</b><br>中(47%)<br><span class="ud" title="主推胜概率63%，其余合计37%">实力差距37</span><span class="ud" title="主推63% vs 次选37%，差距26个百分点">状态波动66</span><span class="ud" title="世预男篮 系数 0.72">联赛冷门系数72</span></td><td class="small l vnote" style="max-width:200px;">价值充足（MC模拟主胜≥60%，可投）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>日本</b> <span class="vs">vs</span> <b>卡塔尔</b><br><small>[<b class="code">周一302</b>] 世预男篮   2026-08-31 18:10</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -3.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 167.5</em><b>大</b></span><span class="pl" title="主胜1-5 26% 主胜6-10 15% 客胜1-5 14% 主胜11-15 13% 客胜6-10 12% 主胜16-20 9%"><em class="tg">胜分差</em><b>主胜6-10</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7" title="高信心推荐">推荐</span></div></td><td><span class="actplays"><b>123:70</b> 胜负·主胜 让分-3.5·让胜 大小分167.5·大</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.66</b><br>中(45%)<br><span class="ud" title="主推胜概率66%，其余合计34%">实力差距34</span><span class="ud" title="主推66% vs 次选34%，差距31个百分点">状态波动62</span><span class="ud" title="世预男篮 系数 0.72">联赛冷门系数72</span></td><td class="small l vnote" style="max-width:200px;">价值充足（MC模拟主胜≥60%，可投）</td><td>预测</td><td>—</td></tr><tr><td class="l"><b>中国</b> <span class="vs">vs</span> <b>黎巴嫩</b><br><small>[<b class="code">周一303</b>] 世预男篮   2026-08-31 19:30</small></td><td class="l"><div class="plays"><span class="pl"><em class="tg">胜负</em><b style="font-weight:700;color:#C0392B;font-size:13px">主胜</b></span><span class="pl"><em class="tg">让分 -4.5</em><span style="color:#999;font-weight:400">让胜</span></span><span class="pl"><em class="tg">大小分 165.5</em><b>大</b></span><span class="pl" title="主胜1-5 19% 客胜1-5 16% 主胜6-10 16% 主胜11-15 11% 主胜16-20 11% 客胜6-10 10%"><em class="tg">胜分差</em><b>主胜6-10</b></span> <span style="margin-left:6px;padding:1px 7px;border-radius:4px;font-size:12px;font-weight:600;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7" title="高信心推荐">推荐</span></div></td><td><span class="actplays"><b>89:87</b> 胜负·主胜 让分-4.5·让负 大小分165.5·大</span></td><td><span class="ok">✅ 中</span></td><td class="small prob"><span class="empty">—</span></td><td class="small udcell"><b class="conf">0.63</b><br>中(47%)<br><span class="ud" title="主推胜概率63%，其余合计37%">实力差距37</span><span class="ud" title="主推63% vs 次选37%，差距25个百分点">状态波动67</span><span class="ud" title="世预男篮 系数 0.72">联赛冷门系数72</span></td><td class="small l vnote" style="max-width:200px;">价值充足（MC模拟主胜≥60%，可投）</td><td>预测</td><td>—</td></tr>
-  </tbody></table></div>
-</div>
-
-<div class="foot">
-  <b>规则</b>：竞彩每日限额 ¥100 · 不限玩法 · 最低 2串1 · 可跨天买入 · 每场多角度分析并提示爆冷。<br>
-  <b>免责声明</b>：竞彩为独立随机事件，本系统仅供娱乐参考，请理性购彩；奖金为理论估算，实际以官方结算为准。
-</div>
-</div>
-
-<script>
-(function(){
-  var clean=function(s){ return (s||'').replace(/\s+/g,' ').trim(); };
-  var tbs=document.querySelectorAll('table.resp');
-  for(var i=0;i<tbs.length;i++){
-    var tb=tbs[i], heads=tb.querySelectorAll('thead th'), labels=[];
-    for(var h=0;h<heads.length;h++) labels.push(clean(heads[h].textContent));
-    var trs=tb.querySelectorAll('tbody tr');
-    for(var j=0;j<trs.length;j++){
-      var tds=trs[j].children;
-      for(var k=0;k<tds.length;k++){
-        if(labels[k] && tds[k].getAttribute('data-label')===null) tds[k].setAttribute('data-label', labels[k]);
-      }
-    }
-  }
-})();
-</script>
-
-</body>
-</html>
+<h2>1. 那不勒斯 vs 科莫
+<span class="m">｜意甲｜2026-08-31 00:30｜编号 016</span></h2>
+<div><span class="tag bad">错：方向／总进球</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>1:0 → <b>1:2</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多维共振·看主胜（5/6 同向）｜小球共识｜方向×让球分歧</td><td class="m" style="width:70px">83%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／平局」</td><td class="m" style="width:70px">34.6%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（那不勒斯胜）</td><td class="m" style="width:70px">40%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">59%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>中性</td><td class="m" style="width:70px">参考 20%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>小球（盘口 2.5）</td><td class="m" style="width:70px">62%</td></tr>
+</table></div><div class="card">
+<h2>2. 拉科鲁尼亚 vs 巴伦西亚
+<span class="m">｜西甲｜2026-08-31 01:30｜编号 017</span></h2>
+<div><span class="tag bad">错：让球／总进球</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>2:1 → <b>3:1</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多数同向·看主胜（4/6 同向）｜小球共识｜方向×让球分歧</td><td class="m" style="width:70px">67%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「客胜／主胜」</td><td class="m" style="width:70px">33.9%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（拉科鲁尼亚胜）</td><td class="m" style="width:70px">38%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">63%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>偏平（强）</td><td class="m" style="width:70px">参考 38%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>小球（盘口 2.5）</td><td class="m" style="width:70px">52%</td></tr>
+</table></div><div class="card">
+<h2>3. 坎布尔 vs 特温特
+<span class="m">｜荷甲｜2026-08-31 02:00｜编号 018</span></h2>
+<div><span class="tag ok">三玩法全中</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>1:2 → <b>1:4</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多维共振·看客胜（5/6 同向）｜大球共识</td><td class="m" style="width:70px">83%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>单选「客胜」</td><td class="m" style="width:70px">70.1%</td></tr><tr><td class="m" style="width:110px">方向</td><td>客胜（特温特胜）</td><td class="m" style="width:70px">65%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队+1）·扎实</td><td class="m" style="width:70px">50%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>中性</td><td class="m" style="width:70px">参考 28%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>大球（盘口 2.5）</td><td class="m" style="width:70px">68%</td></tr>
+</table></div><div class="card">
+<h2>4. 拉齐奥 vs 热那亚
+<span class="m">｜意甲｜2026-08-31 02:45｜编号 019</span></h2>
+<div><span class="tag warn">盘口结构警示</span><span class="tag bad">错：让球</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>2:0 → <b>1:0</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多数同向·看主胜（4/6 同向）｜小球共识｜方向×让球分歧</td><td class="m" style="width:70px">67%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／平局」</td><td class="m" style="width:70px">44.4%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（拉齐奥胜）</td><td class="m" style="width:70px">46%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">52%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>中性</td><td class="m" style="width:70px">参考 20%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>小球（盘口 2.5）</td><td class="m" style="width:70px">57%</td></tr><tr><td class="m" style="width:110px">盘口结构警示</td><td class="warn">盘口陷阱·主队中等占优却被固定让1球 ⇒ 避免买让胜</td><td class="m" style="width:70px">参考 —</td></tr>
+</table></div><div class="card">
+<h2>5. 卡利亚里 vs 国际米兰
+<span class="m">｜意甲｜2026-08-31 02:45｜编号 020</span></h2>
+<div><span class="tag bad">错：让球／总进球</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>0:2 → <b>0:1</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>信号分歧（客胜3 主胜3）·不确定性高｜进球族分歧</td><td class="m" style="width:70px">50%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「平局／客胜」</td><td class="m" style="width:70px">21.3%</td></tr><tr><td class="m" style="width:110px">方向</td><td>客胜（国际米兰胜）</td><td class="m" style="width:70px">58%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队+1）·中性</td><td class="m" style="width:70px">45%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>中性</td><td class="m" style="width:70px">参考 20%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>大球（盘口 2.5）</td><td class="m" style="width:70px">54%</td></tr>
+</table></div><div class="card">
+<h2>6. 摩纳哥 vs 马赛
+<span class="m">｜法甲｜2026-08-31 02:45｜编号 021</span></h2>
+<div><span class="tag bad">错：让球／总进球</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>1:0 → <b>2:0</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多数同向·看主胜（4/6 同向）｜大球共识｜让球方有隐患</td><td class="m" style="width:70px">67%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／客胜」</td><td class="m" style="width:70px">37.0%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（摩纳哥胜）</td><td class="m" style="width:70px">40%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">58%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>中性</td><td class="m" style="width:70px">参考 18%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>大球（盘口 2.5）</td><td class="m" style="width:70px">62%</td></tr>
+</table></div><div class="card">
+<h2>7. 弗拉门戈 vs 博塔弗戈
+<span class="m">｜巴甲｜2026-08-31 03:00｜编号 022</span></h2>
+<div><span class="tag ok">三玩法全中</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>3:0 → <b>3:0</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多维共振·看主胜（5/6 同向）｜大球共识</td><td class="m" style="width:70px">83%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>单选「主胜」</td><td class="m" style="width:70px">67.0%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（弗拉门戈胜）</td><td class="m" style="width:70px">59%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球胜（主队-1）·中性</td><td class="m" style="width:70px">46%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>偏平（强）</td><td class="m" style="width:70px">参考 38%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>大球（盘口 2.5）</td><td class="m" style="width:70px">62%</td></tr>
+</table></div><div class="card">
+<h2>8. 维戈塞尔塔 vs 毕尔巴鄂竞技
+<span class="m">｜西甲｜2026-08-31 03:30｜编号 023</span></h2>
+<div><span class="tag bad">错：方向</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>2:1 → <b>0:2</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多维共振·看主胜（5/6 同向）｜进球族分歧｜方向×让球分歧</td><td class="m" style="width:70px">83%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／客胜」</td><td class="m" style="width:70px">35.8%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（维戈塞尔塔胜）</td><td class="m" style="width:70px">40%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">59%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>偏平（中）</td><td class="m" style="width:70px">参考 22%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>小球（盘口 2.5）</td><td class="m" style="width:70px">52%</td></tr>
+</table></div><div class="card">
+<h2>9. 法马利康 vs 吉维森特
+<span class="m">｜葡超｜2026-08-31 03:30｜编号 024</span></h2>
+<div><span class="tag warn">盘口结构警示</span><span class="tag bad">错：方向</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>2:0 → <b>0:0</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>信号分歧（主胜3 客胜3）·不确定性高｜进球族分歧｜方向×让球分歧</td><td class="m" style="width:70px">50%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／平局」</td><td class="m" style="width:70px">38.4%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（法马利康胜）</td><td class="m" style="width:70px">40%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">53%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>偏平（强）</td><td class="m" style="width:70px">参考 45%</td></tr><tr><td class="m" style="width:110px">总进球</td><td>小球（盘口 2.5）</td><td class="m" style="width:70px">55%</td></tr><tr><td class="m" style="width:110px">盘口结构警示</td><td class="warn">盘口陷阱·主队中等占优却被固定让1球 ⇒ 避免买让胜</td><td class="m" style="width:70px">参考 —</td></tr>
+</table></div><div class="card">
+<h2>10. 圣路易斯城 vs 达拉斯FC
+<span class="m">｜美职｜2026-08-31 07:00｜编号 025</span></h2>
+<div><span class="tag warn">盘口结构警示</span><span class="tag bad">错：方向</span></div>
+<table style="margin-top:8px">
+<tr><td class="m" style="width:110px">比分</td><td>1:0 → <b>3:3</b></td>
+<td class="m" style="width:70px">已结算</td></tr>
+<tr><td class="m" style="width:110px">整体研判</td><td>多维共振·看主胜（4/5 同向）｜大球共识｜方向×让球分歧</td><td class="m" style="width:70px">80%</td></tr><tr><td class="m" style="width:110px">三路方向性计分</td><td>双选「主胜／客胜」</td><td class="m" style="width:70px">40.3%</td></tr><tr><td class="m" style="width:110px">方向</td><td>主胜（圣路易斯城胜）</td><td class="m" style="width:70px">42%</td></tr><tr><td class="m" style="width:110px">竞彩让球胜平负</td><td>让球负（主队-1）·扎实</td><td class="m" style="width:70px">53%</td></tr><tr><td class="m" style="width:110px">平局倾向</td><td>数据不足·不出结论（无赛前画像）</td><td class="m" style="width:70px">参考 —</td></tr><tr><td class="m" style="width:110px">总进球</td><td>大球（盘口 2.5）</td><td class="m" style="width:70px">63%</td></tr><tr><td class="m" style="width:110px">盘口结构警示</td><td class="warn">盘口陷阱·主队中等占优却被固定让1球 ⇒ 避免买让胜</td><td class="m" style="width:70px">参考 —</td></tr>
+</table></div>
+</main>
+<footer>逐场分析日报 · 本页仅为数据分析与历史复盘，不构成任何投注建议｜彩票竞彩均为独立随机事件，请理性购彩</footer>
+</body></html>
