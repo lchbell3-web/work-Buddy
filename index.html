@@ -88,10 +88,6 @@
   .ud{display:inline-block;font-size:10px;border-radius:4px;padding:1px 6px;color:#1f2937;background:#eef1f6;border:1px solid #dbe2ea;cursor:help;transition:.15s;}
   .ud:hover{transform:translateY(-1px);}
   .ud.rh{background:#fdeaea;color:#d64545;border-color:#f5c2c2;} .ud.rm{background:#fdf3e2;color:#d97706;border-color:#f0d9a8;} .ud.rl{background:#e5f6ee;color:#0e9f6e;border-color:#b8e6d3;}
-  .parlay{border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;margin:12px 0;background:linear-gradient(135deg,#fafcff,#f4f8ff);box-shadow:0 1px 3px rgba(16,42,84,.04);transition:.2s;}
-  .parlay:hover{box-shadow:0 4px 14px rgba(16,42,84,.1);transform:translateY(-1px);}
-  .parlay.t3{background:linear-gradient(135deg,#fbfaff,#f5f0fb);}
-  .parlay.t4{background:linear-gradient(135deg,#f0faf8,#e3f3ee);}
   .ph{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-bottom:9px;align-items:center;}
   .ph b{color:#0b2a4a;font-size:16px;}
   .ph .pot{color:#0e9f6e;font-weight:700;}
@@ -120,7 +116,6 @@
     table{font-size:12px;}
     th{padding:8px 6px;white-space:normal;}
     td{padding:7px 5px;}
-    .parlay{padding:12px 12px;}
     .ph{gap:6px 10px;font-size:12px;}
     .ph b{font-size:15px;}
     .plays{gap:4px 6px;}
@@ -138,7 +133,7 @@
     .pl b{font-size:11.5px;}
     .ph .podd{display:inline;}
     .pnote{font-size:11px;line-height:1.8;}
-    /* ===== 移动端卡片化：竞猜两大表转超紧凑卡片（串关头行 + 腿整行拉宽 + 组合中奖信息合并胶囊） ===== */
+    /* ===== 移动端卡片化：竞猜两大表转超紧凑卡片（首列头行 + 内容整行拉宽 + 附加信息合并胶囊） ===== */
     table.resp{width:100%;box-sizing:border-box;}
     table.resp tbody,table.resp tr{display:block;width:100%;box-sizing:border-box;}
     table.resp td{box-sizing:border-box;}
@@ -149,9 +144,6 @@
     table.resp td::before{content:attr(data-label);font-size:10.5px;font-weight:600;color:#94a3b8;margin-right:2px;white-space:nowrap;}
     table.resp tr:nth-child(even) td{background:transparent;}
     table.resp tbody tr:hover td{background:transparent;}
-    /* 串关头部：类型+金额 与 综合评分 一行两端 */
-    table.resp td[data-label="串关"]{font-weight:700;font-size:13px;color:#0b2a4a;}
-    table.resp td[data-label="串关"] .small{color:#64748b;font-size:11px;font-weight:400;margin-left:4px;}
     table.resp td[data-label="综合"]{margin-left:auto;color:#0b2a4a;}
     /* 腿：整行拉宽（label 行首 + 内容流式铺满） */
     table.resp td[data-label="腿·对阵"]{flex:1 1 100%;display:block;border-top:1px dashed #edf1f6;margin-top:3px;padding-top:4px;}
@@ -179,27 +171,27 @@
 <body><div class="portal-nav"><span class="bn">🎱 彩票预测门户</span><a href="ma.html" class="on">逐场分析</a><a href="jc_daily.html" class="">分析日报</a><a href="daily_today.html" class="">今日预测</a><a href="sfc.html" class="">传统足彩</a><a href="sfc_daily.html" class="">足彩日报</a><a href="daily.html" class="">日报</a><a href="weekly.html" class="">周报</a></div>
 <div class="container">
   <div class="card">
-  <h2>📊 逐场分析总览（跨天 2026-11-03 ~ 2026-11-05）</h2>
-  <p class="sub">21 场｜已结算 0 场｜<b>2026-11-03 3 场｜2026-11-04 10 场｜2026-11-05 8 场</b>｜本页只做汇总与导流，不含竞猜推荐与投注方案</p>
+  <h2>📊 逐场分析总览（跨天 2026-11-04 ~ 2026-11-06）</h2>
+  <p class="sub">13 场｜已结算 0 场｜<b>2026-11-04 3 场｜2026-11-05 9 场｜2026-11-06 1 场</b>｜本页只做汇总与导流，不含竞猜推荐与投注方案</p>
   <div class="kpi"><div><span class="m">方向命中</span><b class="bad">—</b><span class="m">0/0</span></div><div><span class="m">让球命中</span><b class="bad">—</b><span class="m">0/0</span></div></div>
   <p class="sub" style="margin-top:14px">
     <a href="ma.html" style="font-weight:700">→ 进入逐场分析详情</a>　
     <a href="jc_daily.html">→ 查看逐场分析日报</a>
   </p>
-  <h3>⚠ 高危场：模型方向与市场隐含方向相反（1 场）</h3>
+  <h3>⚠ 高危场：模型方向与市场隐含方向相反（0 场）</h3>
   <p class="sub">全库 158 场该情形模型错 69.0%（一致时 39.6%）——目前唯一稳定的赛前高危判据，建议观望或双选。</p>
-  <table><tr><th>联赛</th><th>比赛</th><th>模型</th><th>比分</th><th>市场</th></tr><tr><td>欧冠</td><td>曼彻斯特联 vs 罗马</td><td><b>负</b></td><td class="m">1:2</td><td class="m">市场倾向主胜</td></tr></table>
+  <table><tr><th>联赛</th><th>比赛</th><th>模型</th><th>比分</th><th>市场</th></tr><tr><td colspan="5" class="m">今日无此情形</td></tr></table>
   <h3>🚩 警示触发（2 场）</h3>
   <table><tr><th>联赛</th><th>比赛</th><th>模型</th><th>比分</th><th>警示</th></tr><tr><td>欧冠</td><td>波尔图 vs 那不勒斯</td><td><b>胜</b></td><td class="m">2:1</td><td class="m">盘口结构</td></tr><tr><td>欧冠</td><td>PSV埃因霍温 vs 布鲁日</td><td><b>胜</b></td><td class="m">2:1</td><td class="m">盘口结构</td></tr></table>
 </div>
   <div class="card">
     <h2>📋 门户说明</h2>
-    <p class="sub">2026-10-18 调整：<b>以逐场分析为主</b>，导航不再列竞猜推荐/串关/准确率（历史页面仍可直达）。顶部导航：<b>逐场分析</b>（每场 11 维度含整体研判，手机阅读版独立页）｜<b>分析日报</b>（逐场分析的当日总结，含概览、高危场与逐场结论）｜<b>今日预测</b>｜<b>日报</b>（daily.html，页内日期可选）｜<b>周报</b>（自然周周一~周日）。分析数据由每日任务自动生成。</p>
+    <p class="sub">2026-10-18 调整：<b>以逐场分析为主</b>，导航不再列竞猜推荐与投注方案（历史页面仍可直达）。顶部导航：<b>逐场分析</b>（每场 11 维度含整体研判，手机阅读版独立页）｜<b>分析日报</b>（逐场分析的当日总结，含概览、高危场与逐场结论）｜<b>今日预测</b>｜<b>日报</b>（daily.html，页内日期可选）｜<b>周报</b>（自然周周一~周日）。分析数据由每日任务自动生成。</p>
   </div>
 </div>
 <div class="foot">
   <b>免责声明</b>：彩票与竞彩均为独立随机事件，本系统仅供数据分析与历史复盘，不构成投注建议，请理性购彩。<br>
-  <b>说明</b>：本门户 2026-10-18 起以逐场分析为主，不再提供竞猜推荐、串关与投注方案。
+  <b>说明</b>：本门户 2026-10-18 起以逐场分析为主，不再提供竞猜推荐与投注方案；串关功能已于 2026-11-04 整体下线。
 </div>
 </body>
 </html>
